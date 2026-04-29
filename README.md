@@ -22,7 +22,7 @@
 
 ## 结构
 
-- styles/tokens.css：主题 token、颜色、圆角、间距、深浅色变量。
+- styles/tokens.css：主题 token、链接 / header / sidebar / nav / content 语义变量、颜色、圆角、间距、深浅色变量。
 - styles/reset.css：基础 reset、字体继承、链接和 theme-switching 钩子。
 - styles/layout.css：page shell、header、panel、inline links、modal 容器。
 - styles/forms.css：label、field、input、select、textarea、slider。
@@ -34,7 +34,7 @@
 
 四个项目共有的主要不是具体业务组件，而是这些层：
 
-1. 语义 token：例如 --site-bg、--site-fg、--site-muted-fg、--site-border、--site-accent、--site-accent-soft。
+1. 语义 token：例如 --site-bg、--site-fg、--site-content-fg、--site-link、--site-header-bg、--site-sidebar-bg、--site-nav-active-bg、--site-border、--site-accent、--site-accent-soft。
 2. 结构原语：例如 .page-shell、.page-header、.page-meta-row、.eyebrow、.inline-links、.panel。
 3. 交互原语：例如 .theme-toggle、.primary-button、.secondary-button、.ghost-button、.status-pill。
 4. 表单原语：统一的 label、text input、select、range、错误态和 focus ring。

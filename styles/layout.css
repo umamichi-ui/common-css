@@ -7,7 +7,7 @@
 
   .page-header {
     padding-bottom: var(--section-gap);
-    border-bottom: 1px solid var(--site-border-soft);
+    border-bottom: 1px solid var(--site-header-border);
   }
 
   .page-meta-row {
@@ -34,7 +34,7 @@
   .panel-subtitle,
   .toolbar-hint,
   .canvas-caption {
-    color: var(--site-muted-fg);
+    color: var(--site-content-muted-fg);
     line-height: 1.7;
   }
 
@@ -50,7 +50,7 @@
   .panel {
     margin-top: 22px;
     padding-top: 18px;
-    border-top: 1px solid var(--site-border-soft);
+    border-top: 1px solid var(--site-content-border);
   }
 
   .panel:first-of-type {

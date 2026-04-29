@@ -1,16 +1,16 @@
 @layer umamichi-article {
   :root {
-    --article-fg: var(--site-fg);
-    --article-muted-fg: var(--site-muted-fg);
-    --article-border: var(--site-border-soft);
+    --article-fg: var(--site-content-fg);
+    --article-muted-fg: var(--site-content-muted-fg);
+    --article-border: var(--site-content-border);
     --article-table-bg: var(--site-surface);
     --article-table-stripe-bg: var(--site-surface-muted);
     --article-inline-code-bg: var(--site-hover-bg);
     --article-code-block-bg: var(--site-surface-muted);
-    --article-quote-fg: var(--site-muted-fg);
+    --article-quote-fg: var(--site-content-muted-fg);
     --article-list-marker: var(--site-subtle-fg);
-    --article-link: var(--site-accent);
-    --article-link-hover: var(--site-accent-hover);
+    --article-link: var(--site-link);
+    --article-link-hover: var(--site-link-hover);
     --article-title-bar: var(--site-accent-border);
   }
 

@@ -24,13 +24,13 @@
   }
 
   a {
-    color: var(--site-accent);
+    color: var(--site-link);
     text-decoration: none;
     text-underline-offset: 0.15em;
   }
 
   a:hover {
-    color: var(--site-accent-hover);
+    color: var(--site-link-hover);
     text-decoration: underline;
   }
 
