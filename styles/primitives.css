@@ -1,0 +1,204 @@
+@layer umamichi-primitives {
+  .theme-toggle,
+  .ghost-button,
+  .action-button,
+  .primary-button,
+  .secondary-button,
+  .icon-button,
+  .danger-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border: 1px solid var(--site-border);
+    border-radius: var(--radius-pill);
+    background: var(--site-surface);
+    color: var(--site-fg);
+    font-size: 0.92rem;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform 60ms ease;
+  }
+
+  .theme-toggle:hover,
+  .ghost-button:hover,
+  .action-button:hover,
+  .secondary-button:hover,
+  .icon-button:hover,
+  .danger-button:hover {
+    border-color: var(--site-border-strong);
+    background: var(--site-hover-bg);
+  }
+
+  .theme-toggle:active,
+  .ghost-button:active,
+  .action-button:active,
+  .primary-button:active,
+  .secondary-button:active,
+  .icon-button:active,
+  .danger-button:active {
+    background: var(--site-active-bg);
+    transform: translateY(1px);
+  }
+
+  .theme-toggle:focus-visible,
+  .ghost-button:focus-visible,
+  .action-button:focus-visible,
+  .primary-button:focus-visible,
+  .secondary-button:focus-visible,
+  .icon-button:focus-visible,
+  .danger-button:focus-visible {
+    outline: 2px solid var(--site-focus-ring);
+    outline-offset: 1px;
+  }
+
+  .primary-button,
+  .action-button.primary {
+    border-color: var(--site-accent-border);
+    background: var(--site-accent-soft);
+    color: var(--site-fg);
+  }
+
+  .primary-button:hover,
+  .action-button.primary:hover {
+    border-color: var(--site-accent);
+    background: color-mix(in srgb, var(--site-accent-soft) 72%, var(--site-hover-bg));
+  }
+
+  .primary-button:active,
+  .action-button.primary:active {
+    border-color: var(--site-accent);
+    background: color-mix(in srgb, var(--site-accent-soft) 64%, var(--site-active-bg));
+  }
+
+  .ghost-button,
+  .secondary-button,
+  .action-button {
+    border-color: var(--site-border-strong);
+  }
+
+  .icon-button {
+    width: 34px;
+    padding: 0;
+  }
+
+  .danger-button {
+    color: var(--site-danger);
+  }
+
+  .ghost-button:disabled,
+  .action-button:disabled,
+  .primary-button:disabled,
+  .secondary-button:disabled,
+  .icon-button:disabled,
+  .danger-button:disabled,
+  .theme-toggle:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-pill);
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .status-pill.pending {
+    border-color: var(--site-accent-border);
+    background: var(--site-accent-soft);
+    color: var(--site-fg);
+  }
+
+  .status-pill.success {
+    border-color: var(--site-success-border);
+    background: var(--site-success-soft);
+    color: var(--site-success);
+  }
+
+  .status-pill.warning {
+    border-color: var(--site-warning-border);
+    background: var(--site-warning-soft);
+    color: var(--site-warning);
+  }
+
+  .status-pill.danger,
+  .status-pill.error {
+    border-color: var(--site-danger-border);
+    background: var(--site-danger-soft);
+    color: var(--site-danger);
+  }
+
+  .toolbar-buttons,
+  .modal-transfer-actions,
+  .result-actions,
+  .actions,
+  .status-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .toolbar-buttons > * {
+    flex: 0 0 auto;
+  }
+
+  .docs-callout,
+  .app-disclaimer {
+    display: grid;
+    gap: 4px;
+    margin-top: 14px;
+    padding: 12px 14px;
+    border: 1px solid var(--site-accent-border);
+    border-radius: var(--radius-md);
+    background: var(--site-accent-soft);
+    color: var(--site-fg);
+    line-height: 1.65;
+  }
+
+  .docs-callout strong,
+  .app-disclaimer-label {
+    font-weight: 700;
+  }
+
+  .preview-canvas,
+  .canvas-host,
+  .table-wrap {
+    border: 1px solid var(--site-border);
+    background: var(--site-surface);
+    overflow: hidden;
+  }
+
+  .table-wrap {
+    margin-top: 14px;
+    overflow-x: auto;
+  }
+
+  .preview-canvas {
+    display: grid;
+    place-items: center;
+    min-height: 220px;
+    padding: 1.5rem;
+    color: var(--site-muted-fg);
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .toolbar-buttons {
+      width: 100%;
+    }
+
+    .toolbar-buttons > button,
+    .toolbar-buttons > .action-button,
+    .toolbar-buttons > .primary-button,
+    .toolbar-buttons > .secondary-button {
+      flex: 1 1 calc(50% - 6px);
+    }
+  }
+}

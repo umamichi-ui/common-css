@@ -1,0 +1,142 @@
+@layer umamichi-layout {
+  .page-shell {
+    width: min(var(--page-max-width), calc(100vw - (var(--page-gutter) * 2)));
+    margin: 0 auto;
+    padding: var(--page-padding-top) 0 var(--page-padding-bottom);
+  }
+
+  .page-header {
+    padding-bottom: var(--section-gap);
+    border-bottom: 1px solid var(--site-border-soft);
+  }
+
+  .page-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--site-subtle-fg);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .lead,
+  .section-note,
+  .help-text,
+  .meta-note,
+  .panel-subtitle,
+  .toolbar-hint,
+  .canvas-caption {
+    color: var(--site-muted-fg);
+    line-height: 1.7;
+  }
+
+  .inline-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--inline-gap);
+    margin-top: 14px;
+    font-size: 0.95rem;
+  }
+
+  .panel {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--site-border-soft);
+  }
+
+  .panel:first-of-type {
+    margin-top: 18px;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .panel-heading,
+  .section-toolbar,
+  .modal-header,
+  .modal-toolbar,
+  .modal-actions,
+  .section-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .form-grid,
+  .solver-controls-grid,
+  .preview-panel,
+  .slider-group {
+    display: grid;
+    gap: 12px;
+  }
+
+  .single-column {
+    max-width: 280px;
+  }
+
+  .modal-backdrop,
+  .example-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: var(--site-backdrop);
+  }
+
+  .modal-card,
+  .example-modal {
+    width: min(520px, 100%);
+    padding: 16px;
+    border: 1px solid var(--site-border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--site-surface);
+  }
+
+  .example-modal {
+    width: min(72rem, calc(100vw - 32px));
+    max-height: min(88vh, 64rem);
+    overflow: auto;
+    padding: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .page-shell {
+      width: min(var(--page-max-width), calc(100vw - 20px));
+      padding-top: 20px;
+      padding-bottom: 36px;
+    }
+
+    .page-meta-row,
+    .panel-heading,
+    .section-toolbar,
+    .modal-toolbar,
+    .modal-actions,
+    .section-heading-row {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .modal-backdrop,
+    .example-modal-backdrop {
+      padding: 12px;
+    }
+
+    .modal-card,
+    .example-modal {
+      width: 100%;
+      padding: 16px;
+      border-radius: var(--radius-md);
+    }
+  }
+}

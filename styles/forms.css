@@ -1,0 +1,113 @@
+@layer umamichi-forms {
+  label,
+  .field-label {
+    display: grid;
+    gap: 6px;
+    color: var(--site-fg);
+    font-size: 0.94rem;
+    font-weight: 600;
+  }
+
+  .field-block {
+    display: block;
+    width: min(100%, 22rem);
+    margin-bottom: 0.5rem;
+  }
+
+  input:not([type='checkbox']):not([type='radio']):not([type='range']),
+  textarea,
+  select,
+  .text-input,
+  .solver-select {
+    width: 100%;
+    min-height: var(--control-height);
+    padding: 7px var(--control-padding-inline);
+    border: 1px solid var(--site-border);
+    border-radius: var(--radius-sm);
+    background: var(--site-surface);
+    color: var(--site-fg);
+    outline: none;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  input:not([type='checkbox']):not([type='radio']):not([type='range']):hover,
+  textarea:hover,
+  select:hover,
+  .text-input:hover,
+  .solver-select:hover {
+    border-color: var(--site-border-strong);
+  }
+
+  input:not([type='checkbox']):not([type='radio']):not([type='range']):focus,
+  textarea:focus,
+  select:focus,
+  .text-input:focus,
+  .solver-select:focus {
+    border-color: var(--site-accent);
+    box-shadow: 0 0 0 3px var(--site-focus-ring);
+  }
+
+  input[aria-invalid='true'],
+  textarea[aria-invalid='true'],
+  select[aria-invalid='true'],
+  .text-input[aria-invalid='true'],
+  .solver-select[aria-invalid='true'] {
+    border-color: var(--site-danger);
+  }
+
+  input[type='color'] {
+    padding: 3px;
+    min-height: 36px;
+    cursor: pointer;
+  }
+
+  input[type='range'] {
+    width: 100%;
+    margin: 0;
+    accent-color: var(--site-accent);
+  }
+
+  .help-text,
+  .meta-note {
+    font-size: 0.92rem;
+  }
+
+  .help-text.is-error,
+  .meta-note.is-error {
+    color: var(--site-danger);
+  }
+
+  .slider-row {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) 72px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .slider-value {
+    display: inline-flex;
+    justify-content: flex-end;
+    padding: 4px 8px;
+    border: 1px solid var(--site-border);
+    border-radius: var(--radius-sm);
+    background: var(--site-surface);
+    color: var(--site-muted-fg);
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (max-width: 640px) {
+    .field-block {
+      width: 100%;
+    }
+
+    .slider-row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .slider-value {
+      justify-content: flex-start;
+      width: fit-content;
+    }
+  }
+}

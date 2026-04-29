@@ -1,0 +1,75 @@
+@layer umamichi-reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  html,
+  body {
+    margin: 0;
+  }
+
+  body {
+    background: var(--site-bg);
+    color: var(--site-fg);
+    font-family: var(--font-ui);
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: var(--site-accent);
+    text-decoration: none;
+    text-underline-offset: 0.15em;
+  }
+
+  a:hover {
+    color: var(--site-accent-hover);
+    text-decoration: underline;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  dl,
+  dd,
+  figure,
+  blockquote {
+    margin-top: 0;
+  }
+
+  code,
+  pre,
+  samp,
+  kbd {
+    font-family: var(--font-code);
+  }
+
+  html[data-theme-switching='true'] *,
+  html[data-theme-switching='true'] *::before,
+  html[data-theme-switching='true'] *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@umamichi-ui/common-css",
+  "version": "0.1.1",
+  "description": "Shared CSS tokens and primitives for Umamichi UI projects.",
+  "type": "module",
+  "license": "LGPL-3.0-or-later",
+  "files": [
+    "styles",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./styles/index.css",
+    "./tokens.css": "./styles/tokens.css",
+    "./reset.css": "./styles/reset.css",
+    "./layout.css": "./styles/layout.css",
+    "./forms.css": "./styles/forms.css",
+    "./primitives.css": "./styles/primitives.css",
+    "./article.css": "./styles/article.css"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
