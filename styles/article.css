@@ -9,8 +9,8 @@
     --article-code-block-bg: var(--site-surface-muted);
     --article-quote-fg: var(--site-muted-fg);
     --article-list-marker: var(--site-subtle-fg);
-    --article-link: var(--site-accent);
-    --article-link-hover: var(--site-accent-hover);
+    --article-link: var(--site-link);
+    --article-link-hover: var(--site-link-hover);
     --article-title-bar: var(--site-accent-border);
   }
 
