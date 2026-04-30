@@ -38,7 +38,7 @@
 2. 结构原语：例如 .page-shell、.page-header、.page-meta-row、.eyebrow、.inline-links、.panel。
 3. 交互原语：例如 .theme-toggle、.primary-button、.secondary-button、.ghost-button、.status-pill。
 4. 表单原语：统一的 label、text input、select、range、错误态和 focus ring。
-5. 主题钩子：html.dark 和 html[data-theme-switching='true']。
+5. 主题钩子：html.dark、html.theme-transition-lock。
 
 不建议进入公共层的内容：
 
@@ -79,7 +79,7 @@ import '@umamichi-ui/common-css/article.css';
 
 - --site-* 颜色和边框语义变量
 - html.dark 深色主题切换
-- html[data-theme-switching='true'] 切换期间禁用过渡
+- html.theme-transition-lock 在切换期间禁用过渡与动画
 - .page-shell / .page-header / .page-meta-row / .eyebrow / .inline-links
 - .theme-toggle / .primary-button / .secondary-button / .ghost-button / .action-button / .status-pill
 - label / input / select / textarea 的统一边框、圆角、focus 样式
