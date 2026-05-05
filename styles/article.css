@@ -165,6 +165,7 @@
   .article-content .task-list-item input {
     margin-inline-end: 0.6em;
     vertical-align: middle;
+    accent-color: var(--theme-500);
   }
 
   .article-content a {
