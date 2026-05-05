@@ -4,31 +4,31 @@
     --font-code: "Cascadia Code", "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
 
     --site-bg: #ffffff;
-    --site-surface: #ffffff;
-    --site-surface-muted: #fafafa;
-    --site-fg: #27272a;
-    --site-muted-fg: #52525b;
-    --site-subtle-fg: #71717a;
-    --site-content-fg: #3f3f46;
-    --site-content-muted-fg: #71717a;
+    --site-surface: var(--site-bg);
+    --site-surface-muted: var(--gray-50);
+    --site-fg: var(--gray-800);
+    --site-muted-fg: var(--gray-600);
+    --site-subtle-fg: var(--gray-500);
+    --site-content-fg: var(--gray-700);
+    --site-content-muted-fg: var(--gray-500);
 
     --site-border: rgba(0, 0, 0, 0.08);
     --site-border-strong: rgba(0, 0, 0, 0.16);
-    --site-border-soft: #f4f4f5;
-    --site-content-border: #f4f4f5;
+    --site-border-soft: var(--gray-100);
+    --site-content-border: var(--gray-100);
     --site-hover-bg: rgba(0, 0, 0, 0.04);
     --site-active-bg: rgba(0, 0, 0, 0.08);
-    --site-header-bg: #ecfeff;
-    --site-header-border: #a5f3fc;
-    --site-sidebar-bg: #fafafa;
-    --site-sidebar-border: #d4d4d8;
-    --site-nav-active-bg: #ffffff;
+    --site-header-bg: var(--theme-25);
+    --site-header-border: var(--theme-200);
+    --site-sidebar-bg: var(--site-bg);
+    --site-sidebar-border: var(--gray-300);
+    --site-nav-active-bg: var(--site-bg);
 
-    --site-accent: #0c5c72;
-    --site-accent-hover: #134152;
-    --site-accent-strong: #072a38;
-    --site-accent-soft: #ecfeff;
-    --site-accent-border: #a5f3fc;
+    --site-accent: var(--theme-600);
+    --site-accent-hover: var(--theme-700);
+    --site-accent-strong: var(--theme-800);
+    --site-accent-soft: var(--theme-50);
+    --site-accent-border: var(--theme-200);
     --site-link: var(--site-accent);
     --site-link-hover: var(--site-accent-hover);
 
@@ -69,7 +69,7 @@
 
     --site-bg: #0d1117;
     --site-surface: #161b22;
-    --site-surface-muted: #18181b;
+    --site-surface-muted: var(--gray-900);
     --site-fg: #e6edf3;
     --site-muted-fg: #8b949e;
     --site-subtle-fg: #7d8590;
@@ -82,17 +82,17 @@
     --site-content-border: #30363d;
     --site-hover-bg: rgba(177, 186, 196, 0.12);
     --site-active-bg: rgba(177, 186, 196, 0.2);
-    --site-header-bg: #051b24;
-    --site-header-border: #134152;
-    --site-sidebar-bg: #18181b;
-    --site-sidebar-border: #3f3f46;
-    --site-nav-active-bg: color-mix(in srgb, var(--site-accent) 20%, transparent);
+    --site-header-bg: var(--theme-975);
+    --site-header-border: var(--theme-800);
+    --site-sidebar-bg: var(--site-bg);
+    --site-sidebar-border: var(--gray-800);
+    --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
-    --site-accent: #67e8f9;
-    --site-accent-hover: #a5f3fc;
-    --site-accent-strong: #a5f3fc;
-    --site-accent-soft: rgba(103, 232, 249, 0.12);
-    --site-accent-border: rgba(103, 232, 249, 0.32);
+    --site-accent: var(--theme-300);
+    --site-accent-hover: var(--theme-200);
+    --site-accent-strong: var(--theme-200);
+    --site-accent-soft: color-mix(in srgb, var(--theme-300) 12%, transparent);
+    --site-accent-border: color-mix(in srgb, var(--theme-300) 32%, transparent);
     --site-link: var(--site-accent);
     --site-link-hover: var(--site-accent-hover);
 

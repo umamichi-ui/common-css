@@ -13,6 +13,7 @@
   },
   "exports": {
     ".": "./styles/index.css",
+    "./colors.css": "./styles/colors.css",
     "./tokens.css": "./styles/tokens.css",
     "./reset.css": "./styles/reset.css",
     "./layout.css": "./styles/layout.css",
