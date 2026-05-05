@@ -1,0 +1,41 @@
+## Third-Party Notices
+
+This package is primarily distributed under `LGPL-3.0-or-later`, and it includes portions modified from GitHub Primer UI that are licensed under MIT.
+
+### GitHub Primer UI (primitives)
+
+Portions of `styles/article.css` are modified from GitHub Primer UI:
+
+```text
+Modified from GitHub's Primer UI, licensed under the MIT License
+Copyright (c) 2018 GitHub Inc.
+https://github.com/primer/primitives/blob/main/LICENSE
+```
+
+The MIT license is compatible with LGPL distribution in this package as long as the original MIT attribution and license notice are preserved.
+
+## MIT License Text (Primer upstream)
+
+```text
+MIT License
+
+Copyright (c) 2018 GitHub Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```

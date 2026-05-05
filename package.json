@@ -3,10 +3,11 @@
   "version": "0.1.7",
   "description": "Shared CSS tokens and primitives for Umamichi UI projects.",
   "type": "module",
-  "license": "LGPL-3.0-or-later",
+  "license": "(LGPL-3.0-or-later AND MIT)",
   "files": [
     "styles",
-    "README.md"
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "publishConfig": {
     "access": "public"

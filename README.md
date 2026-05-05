@@ -1,7 +1,7 @@
 # @umamichi-ui/common-css
 
 [![npm version](https://img.shields.io/npm/v/@umamichi-ui/common-css)](https://www.npmjs.com/package/@umamichi-ui/common-css)
-[![license: LGPL-3.0-or-later](https://img.shields.io/badge/license-LGPL--3.0--or--later-blue.svg)](./LICENSE)
+[![license: LGPL-3.0-or-later + MIT](https://img.shields.io/badge/license-LGPL--3.0--or--later%20%2B%20MIT-blue.svg)](./LICENSE)
 [![github](https://img.shields.io/badge/GitHub-umamichi--ui%2Fcommon--css-24292f?logo=github)](https://github.com/umamichi-ui/common-css)
 
 包链接：
@@ -85,3 +85,31 @@ import '@umamichi-ui/common-css/article.css';
 - label / input / select / textarea 的统一边框、圆角、focus 样式
 
 这意味着后续如果你要统一调整边框层级、品牌 aqua、圆角或深色模式细节，优先改 styles/tokens.css，然后必要时改相应原语层即可。
+
+## 许可证与兼容性（LGPL + MIT）
+
+> 以下内容为 Codex 5.3 生成，未经过人工法律审查，请谨慎对待。  
+> 仅供工程合规参考，不构成法律意见。
+
+本项目整体以 `LGPL-3.0-or-later` 许可发布。  
+同时，项目中包含少量来自第三方项目的代码/样式片段，这些片段保留其原始许可与版权声明。
+
+当前已知第三方组件包括：
+
+- GitHub Primer UI 的部分样式片段（MIT）
+- 详见 `THIRD_PARTY_NOTICES.md` 及相关源文件头部声明
+
+### 许可并存与适用范围
+
+- 对本项目原创部分，适用 `LGPL-3.0-or-later`。
+- 对第三方引入部分，继续适用其原始许可（如 MIT）。
+- 分发本项目时，需同时满足：
+  - LGPL 对本项目部分的要求；
+  - 第三方许可（如 MIT）的署名与许可文本保留要求。
+
+### 贡献说明（Contributing License Notice）
+
+向本仓库提交贡献（如 PR/patch）即表示你同意：
+
+- 你的原创贡献默认在 `LGPL-3.0-or-later` 下发布。
+- 若贡献中包含第三方代码，你需明确来源并确保其许可与本仓库分发方式兼容。
