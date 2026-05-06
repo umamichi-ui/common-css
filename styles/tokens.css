@@ -18,10 +18,10 @@
     --site-content-border: var(--gray-100);
     --site-hover-bg: rgba(0, 0, 0, 0.04);
     --site-active-bg: rgba(0, 0, 0, 0.08);
-    --site-header-bg: var(--theme-25);
-    --site-header-border: var(--theme-200);
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-300);
+    --site-header-bg: var(--site-sidebar-bg);
+    --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: var(--site-bg);
 
     --site-accent: var(--theme-600);
@@ -82,10 +82,10 @@
     --site-content-border: #30363d;
     --site-hover-bg: rgba(177, 186, 196, 0.12);
     --site-active-bg: rgba(177, 186, 196, 0.2);
-    --site-header-bg: var(--theme-975);
-    --site-header-border: var(--theme-800);
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-800);
+    --site-header-bg: var(--site-sidebar-bg);
+    --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
     --site-accent: var(--theme-300);
