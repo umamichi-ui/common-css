@@ -120,7 +120,6 @@
     min-height: 2rem;
     padding: 0.2rem 0.7rem;
     border: 1px solid transparent;
-    border-radius: var(--radius-pill);
     font-size: 0.84rem;
     font-weight: 600;
     line-height: 1.2;
@@ -217,7 +216,6 @@
     margin-top: 14px;
     padding: 12px 14px;
     border: 1px solid var(--site-accent-border);
-    border-radius: var(--radius-md);
     background: var(--site-accent-soft);
     color: var(--site-fg);
     line-height: 1.65;
