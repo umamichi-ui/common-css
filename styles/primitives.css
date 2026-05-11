@@ -11,12 +11,12 @@
     justify-content: center;
     min-height: 34px;
     padding: 0 12px;
-    border: 1px solid var(--site-border);
-    border-radius: var(--radius-pill);
+    border: none;
+    border-radius: var(--radius-sm);
     background: var(--site-surface);
     color: var(--site-fg);
     font-size: 0.92rem;
-    transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform 60ms ease;
+    transition: background-color var(--transition-fast), color var(--transition-fast), transform 60ms ease;
   }
 
   .theme-toggle:hover,
@@ -25,7 +25,7 @@
   .secondary-button:hover,
   .icon-button:hover,
   .danger-button:hover {
-    border-color: var(--site-border-strong);
+    border: none;
     background: var(--site-hover-bg);
   }
 
@@ -36,6 +36,7 @@
   .secondary-button:active,
   .icon-button:active,
   .danger-button:active {
+    border: none;
     background: var(--site-active-bg);
     transform: translateY(1px);
   }
@@ -53,27 +54,26 @@
 
   .primary-button,
   .action-button.primary {
-    border-color: var(--site-accent-border);
     background: var(--site-accent-soft);
     color: var(--site-fg);
   }
 
   .primary-button:hover,
   .action-button.primary:hover {
-    border-color: var(--site-accent);
+    border: none;
     background: color-mix(in srgb, var(--site-accent-soft) 72%, var(--site-hover-bg));
   }
 
   .primary-button:active,
   .action-button.primary:active {
-    border-color: var(--site-accent);
+    border: none;
     background: color-mix(in srgb, var(--site-accent-soft) 64%, var(--site-active-bg));
   }
 
   .ghost-button,
   .secondary-button,
-  .action-button {
-    border-color: var(--site-border-strong);
+  .action-button:not(.primary) {
+    background: var(--site-surface-muted);
   }
 
   .icon-button {
@@ -82,7 +82,18 @@
   }
 
   .danger-button {
+    background: var(--site-danger-soft);
     color: var(--site-danger);
+  }
+
+  .danger-button:hover {
+    border: none;
+    background: color-mix(in srgb, var(--site-danger-soft) 78%, var(--site-hover-bg));
+  }
+
+  .danger-button:active {
+    border: none;
+    background: color-mix(in srgb, var(--site-danger-soft) 65%, var(--site-active-bg));
   }
 
   .ghost-button:disabled,
