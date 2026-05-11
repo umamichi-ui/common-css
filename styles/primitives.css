@@ -13,8 +13,8 @@
     padding: 0 12px;
     border: none;
     border-radius: var(--radius-sm);
-    background: var(--site-surface);
-    color: var(--site-fg);
+    background: var(--site-button-bg);
+    color: var(--site-button-fg);
     font-size: 0.92rem;
     transition: background-color var(--transition-fast), color var(--transition-fast), transform 60ms ease;
   }
@@ -23,10 +23,10 @@
   .ghost-button:hover,
   .action-button:hover,
   .secondary-button:hover,
-  .icon-button:hover,
-  .danger-button:hover {
+  .icon-button:hover {
     border: none;
-    background: var(--site-hover-bg);
+    background: var(--site-button-hover-bg);
+    color: var(--site-button-fg);
   }
 
   .theme-toggle:active,
@@ -34,10 +34,10 @@
   .action-button:active,
   .primary-button:active,
   .secondary-button:active,
-  .icon-button:active,
-  .danger-button:active {
+  .icon-button:active {
     border: none;
-    background: var(--site-active-bg);
+    background: var(--site-button-active-bg);
+    color: var(--site-button-fg);
     transform: translateY(1px);
   }
 
@@ -54,26 +54,29 @@
 
   .primary-button,
   .action-button.primary {
-    background: var(--site-accent-soft);
-    color: var(--site-fg);
+    background: var(--site-button-accent-bg);
+    color: var(--site-button-accent-fg);
   }
 
   .primary-button:hover,
   .action-button.primary:hover {
     border: none;
-    background: color-mix(in srgb, var(--site-accent-soft) 72%, var(--site-hover-bg));
+    background: var(--site-button-accent-hover-bg);
+    color: var(--site-button-accent-fg);
   }
 
   .primary-button:active,
   .action-button.primary:active {
     border: none;
-    background: color-mix(in srgb, var(--site-accent-soft) 64%, var(--site-active-bg));
+    background: var(--site-button-accent-active-bg);
+    color: var(--site-button-accent-fg);
   }
 
   .ghost-button,
   .secondary-button,
   .action-button:not(.primary) {
-    background: var(--site-surface-muted);
+    background: var(--site-button-bg);
+    color: var(--site-button-fg);
   }
 
   .icon-button {
@@ -88,12 +91,15 @@
 
   .danger-button:hover {
     border: none;
-    background: color-mix(in srgb, var(--site-danger-soft) 78%, var(--site-hover-bg));
+    background: color-mix(in srgb, var(--site-danger-soft) 78%, var(--site-button-hover-bg));
+    color: var(--site-danger);
   }
 
   .danger-button:active {
     border: none;
-    background: color-mix(in srgb, var(--site-danger-soft) 65%, var(--site-active-bg));
+    background: color-mix(in srgb, var(--site-danger-soft) 65%, var(--site-button-active-bg));
+    color: var(--site-danger);
+    transform: translateY(1px);
   }
 
   .ghost-button:disabled,

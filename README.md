@@ -34,7 +34,7 @@
 
 四个项目共有的主要不是具体业务组件，而是这些层：
 
-1. 语义 token：例如 --site-bg、--site-fg、--site-content-fg、--site-link、--site-header-bg、--site-sidebar-bg、--site-nav-active-bg、--site-border、--site-accent、--site-accent-soft。
+1. 语义 token：例如 --site-bg、--site-fg、--site-content-fg、--site-link、--site-header-bg、--site-sidebar-bg、--site-nav-active-bg、--site-border、--site-accent、--site-accent-soft；实心按钮与 [umamichi.moe](https://umamichi.moe)「GitHub 源文件」一致的 `--site-button-bg` / `--site-button-hover-bg` / `--site-button-active-bg` / `--site-button-fg`，以及主操作 `--site-button-accent-*`。
 2. 结构原语：例如 .page-shell、.page-header、.page-meta-row、.eyebrow、.inline-links、.panel。
 3. 交互原语：例如 .theme-toggle、.primary-button、.secondary-button、.ghost-button、.status-pill。
 4. 表单原语：统一的 label、text input、select、range、错误态和 focus ring。
