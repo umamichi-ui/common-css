@@ -1,3 +1,4 @@
+/* Standalone palette. Import before tokens.css or use styles/core.css. */
 @layer umamichi-colors {
   :root {
     --theme-25: #f4fbff;

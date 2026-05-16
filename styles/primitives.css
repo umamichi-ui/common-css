@@ -1,3 +1,4 @@
+/* Depends on styles/core.css (or styles/index.css) for --site-* tokens. */
 @layer umamichi-primitives {
   .theme-toggle,
   .ghost-button,
@@ -39,6 +40,18 @@
     background: var(--site-button-active-bg);
     color: var(--site-button-fg);
     transform: translateY(1px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-toggle:active,
+    .ghost-button:active,
+    .action-button:active,
+    .primary-button:active,
+    .secondary-button:active,
+    .icon-button:active,
+    .danger-button:active {
+      transform: none;
+    }
   }
 
   .theme-toggle:focus-visible,
@@ -144,7 +157,7 @@
   }
 
   .status-pill.danger,
-  .status-pill.error {
+  .status-pill.error { /* .error deprecated: use .danger */
     border-color: var(--site-danger-border);
     background: var(--site-danger-soft);
     color: var(--site-danger);
@@ -188,7 +201,7 @@
   }
 
   .content-surface,
-  .content-panel {
+  .content-panel { /* .content-panel deprecated: use .content-surface */
     border: 1px solid var(--site-content-border);
     background: var(--site-surface);
     color: var(--site-content-fg);

@@ -1,5 +1,5 @@
-@import './colors.css';
-@import './tokens.css';
+/* Full bundle (except article). Order matters: core → reset → layout → forms → primitives. */
+@import './core.css';
 @import './reset.css';
 @import './layout.css';
 @import './forms.css';
