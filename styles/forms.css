@@ -15,6 +15,27 @@
     margin-bottom: 0.5rem;
   }
 
+  .field-hint,
+  .form-scope .field-hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--site-muted-fg);
+  }
+
+  .form-scope .field-label-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .form-scope .field-label-checkbox input {
+    flex: 0 0 auto;
+  }
+
   .form-scope input:not([type='checkbox']):not([type='radio']):not([type='range']),
   .form-scope textarea,
   .form-scope select,

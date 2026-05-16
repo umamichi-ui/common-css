@@ -83,7 +83,11 @@ import '@umamichi-ui/common-css/primitives.css';
 
 布局：`.page-shell`、`.page-header`、`.panel`、`.form-grid`、`.controls-grid`  
 表单：`.select-input`、`.text-input`  
-按钮：`.primary-button`、`.secondary-button`、`.ghost-button`、`.action-button`、`.icon-button`、`.danger-button`、`.theme-toggle`  
+按钮：`.primary-button`、`.secondary-button`、`.outline-button`、`.ghost-button`、`.action-button`、`.icon-button`、`.danger-button`、`.theme-toggle`（填充次要 / 描边次要 / 弱背景 / 危险）  
+菜单：`.dropdown-menu`、`.dropdown-menu-panel`、`.dropdown-menu-item`（`.download-format-menu-*` 为废弃别名）  
+弹窗：`.modal-backdrop` / `.modal-card`、`.confirm-dialog-backdrop` / `.confirm-dialog`、`.example-modal` / `.example-gallery` / `.example-card`  
+表单：`.field-hint`、`.field-label-checkbox`（在 `.form-scope` 内）  
+无障碍：`.visually-hidden`（`reset.css`）  
 状态：`.status-pill` + `.pending` / `.success` / `.warning` / `.danger`
 
 ## 为什么这样拆

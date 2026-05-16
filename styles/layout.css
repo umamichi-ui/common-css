@@ -116,6 +116,100 @@
     padding: 20px;
   }
 
+  .example-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .example-modal-header .panel-subtitle {
+    margin-bottom: 0;
+  }
+
+  .example-gallery {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .example-card {
+    margin: 0;
+    border: 1px solid var(--site-border);
+    border-radius: 0;
+    background: var(--site-surface);
+    overflow: hidden;
+  }
+
+  .example-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--site-bg);
+  }
+
+  .example-card figcaption {
+    display: grid;
+    gap: 4px;
+    padding: 12px 14px 14px;
+  }
+
+  .example-card strong {
+    font-size: 0.98rem;
+  }
+
+  .example-card span {
+    color: var(--site-muted-fg);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .confirm-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+    background: var(--site-backdrop);
+  }
+
+  .confirm-dialog {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 22px 18px;
+    border-radius: 0;
+    border: 1px solid var(--site-border);
+    background: var(--site-surface);
+    color: var(--site-fg);
+    box-sizing: border-box;
+  }
+
+  .confirm-dialog-title {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .confirm-dialog-body {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--site-content-fg);
+  }
+
+  .confirm-dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
   @media (max-width: 720px) {
     .page-shell {
       width: min(var(--page-max-width), calc(100vw - 20px));
@@ -143,6 +237,14 @@
       width: 100%;
       padding: 16px;
       border-radius: var(--radius-md);
+    }
+
+    .example-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .confirm-dialog-backdrop {
+      padding: 16px;
     }
   }
 }
