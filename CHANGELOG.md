@@ -2,6 +2,12 @@
 
 本文件记录 [@umamichi-ui/common-css](https://www.npmjs.com/package/@umamichi-ui/common-css) 的版本变更。
 
+## 0.5.0
+
+- **破坏性**：`--theme-100`～`--theme-900` 全部换用 [Evil Martians Harmonizer](https://harmonizer.evilmartians.com/)（hue=213）生成色值；凡直接引用这些变量的界面（链接、强调色、页眉、accent 按钮等）色相与对比度会与 0.4.x 不同。
+- **破坏性**：从 `colors.css` 移除 `--theme-950`、`--gray-950`。若项目直接引用，请改为 `900` 档或改用语义 token。
+- `--gray-100`～`--gray-900` 色值未改。
+
 ## 0.4.0
 
 - **破坏性**：从 `colors.css` 移除 palette 变量 `--theme-25`、`--theme-50`、`--theme-975`、`--gray-25`、`--gray-50`、`--gray-975`。若项目直接引用这些变量，请改为 `100` 档或改用语义 token（如 `--site-surface-muted`、`--site-accent-soft`）。
