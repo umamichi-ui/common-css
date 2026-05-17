@@ -4,6 +4,10 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.2
+
+- `.confirm-dialog` 边框由 `--site-border` 改为 `--site-border-strong`，与 `.modal-card`、`.example-modal` 一致，浅色主题下确认框与编辑弹窗对比度对齐。
+
 ## 0.7.1
 
 - 实心按钮默认背景对齐 palette **-200 / -800** 档：浅色 `--site-button-bg` 为 `gray-200`、主操作为 `theme-200`；深色次要按钮仍为 `gray-800`，主操作默认 `theme-800`（悬停/按下依次为 `700` / `600`）。

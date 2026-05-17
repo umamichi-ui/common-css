@@ -230,7 +230,7 @@
     max-width: 400px;
     padding: 20px 22px 18px;
     border-radius: 0;
-    border: 1px solid var(--site-border);
+    border: 1px solid var(--site-border-strong);
     background: var(--site-surface);
     color: var(--site-fg);
     box-sizing: border-box;
