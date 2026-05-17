@@ -53,6 +53,7 @@
     --site-button-accent-fg: var(--theme-100);
 
     --site-backdrop: rgba(1, 4, 9, 0.66);
+    --site-frosted-overlay: color-mix(in srgb, var(--site-bg) 68%, transparent);
     --site-focus-ring: color-mix(in srgb, var(--site-accent) 28%, transparent);
   }
 
@@ -110,6 +111,7 @@
       --site-button-accent-fg: var(--theme-100);
 
       --site-backdrop: rgba(1, 4, 9, 0.66);
+      --site-frosted-overlay: color-mix(in srgb, var(--site-bg) 68%, transparent);
       --site-focus-ring: color-mix(in srgb, var(--site-accent) 28%, transparent);
     }
   }

@@ -46,7 +46,10 @@
     --site-danger-soft: #fef0f0;
     --site-danger-border: #efb4b4;
 
+    /* Solid dim when frosted glass is unavailable or reduced (see --site-frosted-*). */
     --site-backdrop: rgba(17, 24, 39, 0.5);
+    --site-frosted-blur: 12px;
+    --site-frosted-overlay: color-mix(in srgb, var(--site-surface) 58%, transparent);
     --site-focus-ring: color-mix(in srgb, var(--site-accent) 22%, transparent);
 
     --radius-sm: 10px;
@@ -81,5 +84,14 @@
 
   html.light {
     color-scheme: light;
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    :root,
+    html.dark,
+    html:not(.light):not(.dark) {
+      --site-frosted-blur: 0px;
+      --site-frosted-overlay: var(--site-backdrop);
+    }
   }
 }

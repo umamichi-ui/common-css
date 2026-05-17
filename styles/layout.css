@@ -97,7 +97,9 @@
     display: grid;
     place-items: center;
     padding: 20px;
-    background: var(--site-backdrop);
+    backdrop-filter: blur(var(--site-frosted-blur));
+    -webkit-backdrop-filter: blur(var(--site-frosted-blur));
+    background: var(--site-frosted-overlay);
   }
 
   .modal-card,
@@ -174,7 +176,27 @@
     justify-content: center;
     padding: 24px;
     box-sizing: border-box;
-    background: var(--site-backdrop);
+    backdrop-filter: blur(var(--site-frosted-blur));
+    -webkit-backdrop-filter: blur(var(--site-frosted-blur));
+    background: var(--site-frosted-overlay);
+  }
+
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .modal-backdrop,
+    .example-modal-backdrop,
+    .confirm-dialog-backdrop {
+      background: var(--site-backdrop);
+    }
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    .modal-backdrop,
+    .example-modal-backdrop,
+    .confirm-dialog-backdrop {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      background: var(--site-backdrop);
+    }
   }
 
   .confirm-dialog {

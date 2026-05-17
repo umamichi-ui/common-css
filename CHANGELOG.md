@@ -2,6 +2,15 @@
 
 本文件记录 [@umamichi-ui/common-css](https://www.npmjs.com/package/@umamichi-ui/common-css) 的版本变更。
 
+> 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
+
+## 0.6.0
+
+- 对齐 Umamichi UI conventions 第 3 条：弹窗遮罩改为浅色半透明白 / 深色半透明黑毛玻璃（`backdrop-filter` + `--site-frosted-overlay`），不再以纯色 `--site-backdrop` 作为默认遮罩外观。
+- 新增语义 token：`--site-frosted-blur`（默认 `12px`）、`--site-frosted-overlay`（浅色 `color-mix` 自 `--site-surface`，深色自 `--site-bg`）。
+- `--site-backdrop` 保留为**回退**：不支持 `backdrop-filter`、或用户开启「减少透明度」时，`.modal-backdrop`、`.example-modal-backdrop`、`.confirm-dialog-backdrop` 仍使用该变量。
+- 消费方若曾在本地为上述类重复实现毛玻璃，可在升级后删除重复覆盖，仅保留项目特例（如全屏预览、局部 loading 层）；自定义遮罩可复用 `--site-frosted-*` token。
+
 ## 0.5.0
 
 - **破坏性**：`--theme-100`～`--theme-900` 全部换用 [Evil Martians Harmonizer](https://harmonizer.evilmartians.com/)（hue=213）生成色值；凡直接引用这些变量的界面（链接、强调色、页眉、accent 按钮等）色相与对比度会与 0.4.x 不同。
