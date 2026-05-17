@@ -71,16 +71,16 @@
     --transition-fast: 120ms ease;
     --transition-overlay: 200ms ease;
 
-    /* 与 umamichi.moe ArticleSourceActions「GitHub 源文件」等 data-site-button 一致 */
-    --site-button-bg: var(--gray-100);
-    --site-button-hover-bg: var(--gray-200);
-    --site-button-active-bg: var(--gray-300);
+    /* 与 umamichi.moe ArticleSourceActions「GitHub 源文件」等 data-site-button 一致；默认档 -200 */
+    --site-button-bg: var(--gray-200);
+    --site-button-hover-bg: var(--gray-300);
+    --site-button-active-bg: var(--gray-400);
     --site-button-fg: var(--site-fg);
 
-    --site-button-accent-bg: var(--theme-100);
-    --site-button-accent-hover-bg: var(--theme-200);
-    --site-button-accent-active-bg: var(--theme-300);
-    --site-button-accent-fg: var(--theme-900);
+    --site-button-accent-bg: var(--theme-200);
+    --site-button-accent-hover-bg: var(--theme-300);
+    --site-button-accent-active-bg: var(--theme-400);
+    --site-button-accent-fg: var(--theme-800);
   }
 
   html.light {

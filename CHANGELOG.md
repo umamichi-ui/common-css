@@ -4,6 +4,11 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.1
+
+- 实心按钮默认背景对齐 palette **-200 / -800** 档：浅色 `--site-button-bg` 为 `gray-200`、主操作为 `theme-200`；深色次要按钮仍为 `gray-800`，主操作默认 `theme-800`（悬停/按下依次为 `700` / `600`）。
+- 连带调整 `--site-button-hover-bg`、`--site-button-active-bg` 与 `--site-button-accent-*` 悬停/按下档，保持逐级加深（浅色）或提亮（深色主题色）。
+
 ## 0.7.0
 
 - 新增 `--transition-overlay`（默认 `200ms ease`），用于弹层遮罩、面板与下拉菜单。

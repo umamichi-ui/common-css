@@ -47,9 +47,9 @@
     --site-button-active-bg: var(--gray-600);
     --site-button-fg: var(--site-fg);
 
-    --site-button-accent-bg: var(--theme-900);
-    --site-button-accent-hover-bg: var(--theme-800);
-    --site-button-accent-active-bg: var(--theme-700);
+    --site-button-accent-bg: var(--theme-800);
+    --site-button-accent-hover-bg: var(--theme-700);
+    --site-button-accent-active-bg: var(--theme-600);
     --site-button-accent-fg: var(--theme-100);
 
     --site-backdrop: rgba(1, 4, 9, 0.66);
@@ -105,9 +105,9 @@
       --site-button-active-bg: var(--gray-600);
       --site-button-fg: var(--site-fg);
 
-      --site-button-accent-bg: var(--theme-900);
-      --site-button-accent-hover-bg: var(--theme-800);
-      --site-button-accent-active-bg: var(--theme-700);
+      --site-button-accent-bg: var(--theme-800);
+      --site-button-accent-hover-bg: var(--theme-700);
+      --site-button-accent-active-bg: var(--theme-600);
       --site-button-accent-fg: var(--theme-100);
 
       --site-backdrop: rgba(1, 4, 9, 0.66);
