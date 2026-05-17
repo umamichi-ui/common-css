@@ -2,6 +2,12 @@
 
 本文件记录 [@umamichi-ui/common-css](https://www.npmjs.com/package/@umamichi-ui/common-css) 的版本变更。
 
+## 0.4.0
+
+- **破坏性**：从 `colors.css` 移除 palette 变量 `--theme-25`、`--theme-50`、`--theme-975`、`--gray-25`、`--gray-50`、`--gray-975`。若项目直接引用这些变量，请改为 `100` 档或改用语义 token（如 `--site-surface-muted`、`--site-accent-soft`）。
+- 浅色 `--site-surface-muted` 改为 `var(--gray-100)`（原为 `var(--gray-50)`）。
+- 浅色 `--site-accent-soft` 改为 `var(--theme-100)`（原为 `var(--theme-50)`）。
+
 ## 0.3.1
 
 - 浅色 `--site-header-bg` 改为 `var(--theme-200)`（原为 `var(--theme-100)`）。

@@ -8,7 +8,7 @@
 
     --site-bg: #ffffff;
     --site-surface: var(--site-bg);
-    --site-surface-muted: var(--gray-50);
+    --site-surface-muted: var(--gray-100);
     --site-fg: var(--gray-800);
     --site-muted-fg: var(--gray-600);
     --site-subtle-fg: var(--gray-500);
@@ -31,7 +31,7 @@
     --site-accent: var(--theme-700);
     --site-accent-hover: var(--theme-800);
     --site-accent-strong: var(--theme-800);
-    --site-accent-soft: var(--theme-50);
+    --site-accent-soft: var(--theme-100);
     --site-accent-border: var(--theme-200);
     --site-link: var(--site-accent);
     --site-link-hover: var(--site-accent-hover);
