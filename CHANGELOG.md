@@ -4,6 +4,14 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.0
+
+- 新增 `--transition-overlay`（默认 `200ms ease`），用于弹层遮罩、面板与下拉菜单。
+- 弹层：`.modal-backdrop`、`.example-modal-backdrop`、`.confirm-dialog-backdrop`、`.site-overlay-backdrop` 在挂载后加 `.is-open` 时淡入；子面板（`.modal-card`、`.confirm-dialog`、`.example-modal`、`.site-overlay-panel`）轻微上移淡入。
+- 下拉：`.dropdown-menu-panel` / `.download-format-menu-panel` 在 `.is-open` 时淡入并下移归位。
+- 全局链接（`reset` 内 `a`）：`color` 使用 `--transition-fast`。
+- 消费方关闭弹层时应先去掉 `.is-open`、等待 `--transition-overlay` 时长后再卸载 DOM（可用 `prefers-reduced-motion` 已缩短过渡）。
+
 ## 0.6.0
 
 - 对齐 Umamichi UI conventions 第 3 条：弹窗遮罩改为浅色半透明白 / 深色半透明黑毛玻璃（`backdrop-filter` + `--site-frosted-overlay`），不再以纯色 `--site-backdrop` 作为默认遮罩外观。

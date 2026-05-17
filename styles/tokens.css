@@ -69,6 +69,7 @@
     --control-height: 38px;
     --control-padding-inline: 12px;
     --transition-fast: 120ms ease;
+    --transition-overlay: 200ms ease;
 
     /* 与 umamichi.moe ArticleSourceActions「GitHub 源文件」等 data-site-button 一致 */
     --site-button-bg: var(--gray-100);

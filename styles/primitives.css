@@ -350,6 +350,33 @@
     background: var(--site-surface);
     color: var(--site-fg);
     box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(-4px);
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity var(--transition-overlay),
+      transform var(--transition-overlay),
+      visibility 0s linear var(--transition-overlay);
+  }
+
+  .dropdown-menu-panel.is-open,
+  .download-format-menu-panel.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      opacity var(--transition-overlay),
+      transform var(--transition-overlay),
+      visibility 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dropdown-menu-panel,
+    .download-format-menu-panel {
+      transform: none;
+    }
   }
 
   .dropdown-menu-panel > li,
