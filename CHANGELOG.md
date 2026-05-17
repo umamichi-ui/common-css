@@ -4,6 +4,11 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.3
+
+- `.article-content img`：设为 `display: block` 并 `margin-inline: auto`，在栏宽内水平居中。
+- `.article-content table`：增加 `margin-inline: auto`；在 `width: max-content` 且未撑满栏宽时整体居中。
+
 ## 0.7.2
 
 - `.confirm-dialog` 边框由 `--site-border` 改为 `--site-border-strong`，与 `.modal-card`、`.example-modal` 一致，浅色主题下确认框与编辑弹窗对比度对齐。
