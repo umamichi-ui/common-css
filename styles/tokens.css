@@ -23,13 +23,13 @@
     --site-active-bg: rgba(0, 0, 0, 0.08);
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-300);
-    --site-header-bg: var(--theme-100);
+    --site-header-bg: var(--theme-200);
     --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: var(--site-bg);
     --site-header-offset: 0px;
 
-    --site-accent: var(--theme-600);
-    --site-accent-hover: var(--theme-700);
+    --site-accent: var(--theme-700);
+    --site-accent-hover: var(--theme-800);
     --site-accent-strong: var(--theme-800);
     --site-accent-soft: var(--theme-50);
     --site-accent-border: var(--theme-200);

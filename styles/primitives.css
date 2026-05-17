@@ -330,9 +330,11 @@
 
   .dropdown-menu-chevron,
   .download-format-menu-chevron {
-    font-size: 0.72em;
-    line-height: 1;
+    display: inline-block;
+    flex-shrink: 0;
+    line-height: 0;
     opacity: 0.82;
+    vertical-align: middle;
   }
 
   .dropdown-menu-panel,
