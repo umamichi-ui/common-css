@@ -4,6 +4,10 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.4
+
+- 深色主题 `--site-header-bg` 由 `theme-600` 改为 `theme-400`，与浅色顶栏水色条带更接近；`html.dark` 与 `prefers-color-scheme: dark` 块已同步。
+
 ## 0.7.3
 
 - `.article-content img`：设为 `display: block` 并 `margin-inline: auto`，在栏宽内水平居中。

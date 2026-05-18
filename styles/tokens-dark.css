@@ -20,7 +20,7 @@
     --site-active-bg: rgba(177, 186, 196, 0.2);
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-800);
-    --site-header-bg: var(--theme-600);
+    --site-header-bg: var(--theme-400);
     --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
@@ -78,7 +78,7 @@
       --site-active-bg: rgba(177, 186, 196, 0.2);
       --site-sidebar-bg: var(--site-bg);
       --site-sidebar-border: var(--gray-800);
-      --site-header-bg: var(--theme-600);
+      --site-header-bg: var(--theme-400);
       --site-header-border: var(--site-sidebar-border);
       --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
