@@ -3,8 +3,8 @@
   html.dark {
     color-scheme: dark;
 
-    --site-bg: #000000;
-    --site-surface: #000000;
+    --site-bg: #0d1117;
+    --site-surface: #161b22;
     --site-surface-muted: var(--gray-900);
     --site-fg: #e6edf3;
     --site-muted-fg: #8b949e;
@@ -61,8 +61,8 @@
     html:not(.light):not(.dark) {
       color-scheme: dark;
 
-      --site-bg: #000000;
-      --site-surface: #000000;
+      --site-bg: #0d1117;
+      --site-surface: #161b22;
       --site-surface-muted: var(--gray-900);
       --site-fg: #e6edf3;
       --site-muted-fg: #8b949e;

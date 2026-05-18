@@ -4,6 +4,10 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.6
+
+- 回退 0.7.5：深色主题 `--site-bg`、`--site-surface` 恢复为 `#0d1117` / `#161b22`；`html.dark` 与 `prefers-color-scheme: dark` 块已同步。
+
 ## 0.7.5
 
 - 深色主题 `--site-bg`、`--site-surface` 改为 `#000000`（原为 `#0d1117` / `#161b22`）；`html.dark` 与 `prefers-color-scheme: dark` 块已同步。
