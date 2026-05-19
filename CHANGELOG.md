@@ -4,6 +4,13 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.8.0
+
+- 弹窗遮罩（`.modal-backdrop`、`.example-modal-backdrop`、`.site-overlay-backdrop`、`.confirm-dialog-backdrop`）合并为同一套全视口规则：`fixed` + `100vw` / `100dvh`；默认 `z-index: 1000`。移除 `.site-overlay-backdrop` 的 `z-index: auto`。`.confirm-dialog-backdrop` 为 `1020`，便于叠在其它浮层之上。
+- `.form-scope` 内 `checkbox`、`radio`、`range`、`progress`、`meter`、`select` 及 `.select-input` 使用 `accent-color: var(--site-accent)`。
+- `.article-content` 任务列表 checkbox 的 `accent-color` 改为 `var(--site-accent)`（原 `theme-500`）。
+- 全局滚动条：`scrollbar-color` 与 WebKit `::-webkit-scrollbar*` 使用 `--site-accent` 与 `--site-surface-muted`（`scrollbar-width: thin`）。
+
 ## 0.7.11
 
 - 浅色主题强调色上移：`--site-accent` 为 `theme-500`（原 `theme-700`）；`--site-accent-hover` 与 `--site-accent-strong` 为 `theme-400`（原 `theme-800`）。链接与焦点环等派生自 `--site-accent` 的样式同步变亮。

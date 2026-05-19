@@ -91,13 +91,16 @@
 
   .modal-backdrop,
   .example-modal-backdrop,
-  .site-overlay-backdrop {
+  .site-overlay-backdrop,
+  .confirm-dialog-backdrop {
     position: fixed;
     inset: 0;
-    z-index: 50;
-    display: grid;
-    place-items: center;
-    padding: 20px;
+    z-index: 1000;
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
     box-sizing: border-box;
     opacity: 0;
     pointer-events: none;
@@ -107,18 +110,26 @@
     transition: opacity var(--transition-overlay);
   }
 
+  .modal-backdrop,
+  .example-modal-backdrop {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+  }
+
   .modal-backdrop.is-open,
   .example-modal-backdrop.is-open,
-  .site-overlay-backdrop.is-open {
+  .site-overlay-backdrop.is-open,
+  .confirm-dialog-backdrop.is-open {
     opacity: 1;
     pointer-events: auto;
   }
 
   .site-overlay-backdrop {
-    z-index: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    padding: 20px;
   }
 
   .modal-card,
@@ -204,25 +215,11 @@
   }
 
   .confirm-dialog-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: 40;
+    z-index: 1020;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 24px;
-    box-sizing: border-box;
-    opacity: 0;
-    pointer-events: none;
-    backdrop-filter: blur(var(--site-frosted-blur));
-    -webkit-backdrop-filter: blur(var(--site-frosted-blur));
-    background: var(--site-frosted-overlay);
-    transition: opacity var(--transition-overlay);
-  }
-
-  .confirm-dialog-backdrop.is-open {
-    opacity: 1;
-    pointer-events: auto;
   }
 
   .confirm-dialog {

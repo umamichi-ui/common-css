@@ -84,10 +84,24 @@
     cursor: pointer;
   }
 
+  .form-scope input[type='checkbox'],
+  .form-scope input[type='radio'],
+  .form-scope input[type='range'],
+  .form-scope progress,
+  .form-scope meter,
+  .form-scope select,
+  .select-input {
+    accent-color: var(--site-accent);
+  }
+
   .form-scope input[type='range'] {
     width: 100%;
     margin: 0;
-    accent-color: var(--site-accent);
+  }
+
+  .form-scope progress,
+  .form-scope meter {
+    width: 100%;
   }
 
   .form-scope .help-text.is-error,
