@@ -4,6 +4,10 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.8
+
+- `--site-header-fg` 由 `theme-800` 改为 `theme-900`（浅色与深色已同步），水色顶栏前景对比度提高。
+
 ## 0.7.7
 
 - 深色主题 `--site-surface` 改为 `var(--site-bg)`，与页面背景一致；`html.dark` 与 `prefers-color-scheme: dark` 块已同步。

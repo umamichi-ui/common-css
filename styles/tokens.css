@@ -24,7 +24,7 @@
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-300);
     --site-header-bg: var(--theme-200);
-    --site-header-fg: var(--theme-800);
+    --site-header-fg: var(--theme-900);
     --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: var(--site-bg);
     --site-header-offset: 0px;

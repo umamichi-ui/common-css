@@ -21,7 +21,7 @@
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-800);
     --site-header-bg: var(--theme-400);
-    --site-header-fg: var(--theme-800);
+    --site-header-fg: var(--theme-900);
     --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
