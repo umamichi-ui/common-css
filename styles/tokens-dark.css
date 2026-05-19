@@ -4,7 +4,7 @@
     color-scheme: dark;
 
     --site-bg: #0d1117;
-    --site-surface: #161b22;
+    --site-surface: var(--site-bg);
     --site-surface-muted: var(--gray-900);
     --site-fg: #e6edf3;
     --site-muted-fg: #8b949e;
@@ -21,6 +21,7 @@
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-800);
     --site-header-bg: var(--theme-400);
+    --site-header-fg: var(--theme-800);
     --site-header-border: var(--site-sidebar-border);
     --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
@@ -47,10 +48,10 @@
     --site-button-active-bg: var(--gray-600);
     --site-button-fg: var(--site-fg);
 
-    --site-button-accent-bg: var(--theme-800);
-    --site-button-accent-hover-bg: var(--theme-700);
-    --site-button-accent-active-bg: var(--theme-600);
-    --site-button-accent-fg: var(--theme-100);
+    --site-button-accent-bg: var(--theme-400);
+    --site-button-accent-hover-bg: var(--theme-300);
+    --site-button-accent-active-bg: var(--theme-200);
+    --site-button-accent-fg: var(--theme-800);
 
     --site-backdrop: rgba(1, 4, 9, 0.66);
     --site-frosted-overlay: color-mix(in srgb, var(--site-bg) 68%, transparent);
@@ -62,7 +63,7 @@
       color-scheme: dark;
 
       --site-bg: #0d1117;
-      --site-surface: #161b22;
+      --site-surface: var(--site-bg);
       --site-surface-muted: var(--gray-900);
       --site-fg: #e6edf3;
       --site-muted-fg: #8b949e;
@@ -79,6 +80,7 @@
       --site-sidebar-bg: var(--site-bg);
       --site-sidebar-border: var(--gray-800);
       --site-header-bg: var(--theme-400);
+      --site-header-fg: var(--theme-800);
       --site-header-border: var(--site-sidebar-border);
       --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 
@@ -105,10 +107,10 @@
       --site-button-active-bg: var(--gray-600);
       --site-button-fg: var(--site-fg);
 
-      --site-button-accent-bg: var(--theme-800);
-      --site-button-accent-hover-bg: var(--theme-700);
-      --site-button-accent-active-bg: var(--theme-600);
-      --site-button-accent-fg: var(--theme-100);
+      --site-button-accent-bg: var(--theme-400);
+      --site-button-accent-hover-bg: var(--theme-300);
+      --site-button-accent-active-bg: var(--theme-200);
+      --site-button-accent-fg: var(--theme-800);
 
       --site-backdrop: rgba(1, 4, 9, 0.66);
       --site-frosted-overlay: color-mix(in srgb, var(--site-bg) 68%, transparent);

@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.7
+
+- 深色主题 `--site-surface` 改为 `var(--site-bg)`，与页面背景一致；`html.dark` 与 `prefers-color-scheme: dark` 块已同步。
+- 深色主题色实心按钮：`--site-button-accent-bg` 为 `theme-400`，悬停 `theme-300`、按下 `theme-200`（较默认更亮）；前景 `--site-button-accent-fg` 为 `theme-800`。
+- 新增 `--site-header-fg`（浅色与深色均为 `theme-800`），供水色顶栏前景使用。
+
 ## 0.7.6
 
 - 回退 0.7.5：深色主题 `--site-bg`、`--site-surface` 恢复为 `#0d1117` / `#161b22`；`html.dark` 与 `prefers-color-scheme: dark` 块已同步。
