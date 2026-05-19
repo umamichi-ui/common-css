@@ -4,6 +4,10 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.11
+
+- 浅色主题强调色上移：`--site-accent` 为 `theme-500`（原 `theme-700`）；`--site-accent-hover` 与 `--site-accent-strong` 为 `theme-400`（原 `theme-800`）。链接与焦点环等派生自 `--site-accent` 的样式同步变亮。
+
 ## 0.7.10
 
 - 浅色主题和深色主题 `--site-button-accent-fg` 由 `theme-800` 改为 `theme-900`，与 `--site-header-fg` 一致。

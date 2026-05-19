@@ -29,9 +29,9 @@
     --site-nav-active-bg: var(--site-bg);
     --site-header-offset: 0px;
 
-    --site-accent: var(--theme-700);
-    --site-accent-hover: var(--theme-800);
-    --site-accent-strong: var(--theme-800);
+    --site-accent: var(--theme-500);
+    --site-accent-hover: var(--theme-400);
+    --site-accent-strong: var(--theme-400);
     --site-accent-soft: var(--theme-100);
     --site-accent-border: var(--theme-200);
     --site-link: var(--site-accent);
