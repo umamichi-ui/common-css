@@ -5,7 +5,7 @@
 
     --site-bg: #0d1117;
     --site-surface: var(--site-bg);
-    --site-surface-muted: var(--gray-900);
+    --site-surface-muted: var(--gray-800);
     --site-fg: #e6edf3;
     --site-muted-fg: #8b949e;
     --site-subtle-fg: #7d8590;
@@ -19,7 +19,7 @@
     --site-hover-bg: rgba(177, 186, 196, 0.12);
     --site-active-bg: rgba(177, 186, 196, 0.2);
     --site-sidebar-bg: var(--site-bg);
-    --site-sidebar-border: var(--gray-800);
+    --site-sidebar-border: var(--gray-700);
     --site-header-bg: var(--theme-400);
     --site-header-fg: var(--theme-900);
     --site-header-border: var(--site-sidebar-border);
@@ -64,7 +64,7 @@
 
       --site-bg: #0d1117;
       --site-surface: var(--site-bg);
-      --site-surface-muted: var(--gray-900);
+      --site-surface-muted: var(--gray-800);
       --site-fg: #e6edf3;
       --site-muted-fg: #8b949e;
       --site-subtle-fg: #7d8590;
@@ -78,9 +78,9 @@
       --site-hover-bg: rgba(177, 186, 196, 0.12);
       --site-active-bg: rgba(177, 186, 196, 0.2);
       --site-sidebar-bg: var(--site-bg);
-      --site-sidebar-border: var(--gray-800);
+      --site-sidebar-border: var(--gray-700);
       --site-header-bg: var(--theme-400);
-      --site-header-fg: var(--theme-800);
+      --site-header-fg: var(--theme-900);
       --site-header-border: var(--site-sidebar-border);
       --site-nav-active-bg: color-mix(in srgb, var(--theme-400) 20%, transparent);
 

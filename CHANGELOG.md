@@ -4,6 +4,11 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.7.9
+
+- 深色主题灰色背景与侧栏边框上移一档：`--site-surface-muted` 为 `gray-800`（原 `gray-900`），`--site-sidebar-border` 为 `gray-700`（原 `gray-800`）；`html.dark` 与 `prefers-color-scheme: dark` 已同步。
+- `prefers-color-scheme: dark` 下 `--site-header-fg` 与 `html.dark` 对齐为 `theme-900`。
+
 ## 0.7.8
 
 - `--site-header-fg` 由 `theme-800` 改为 `theme-900`（浅色与深色已同步），水色顶栏前景对比度提高。
