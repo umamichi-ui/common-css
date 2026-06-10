@@ -2,6 +2,10 @@
 
 This package is primarily distributed under `LGPL-3.0-or-later`, and it includes portions modified from GitHub Primer UI that are licensed under MIT.
 
+### Build tooling
+
+`@csstools/postcss-oklab-function` (MIT) is used at publish time to emit color fallbacks for `oklch()` / `oklab()` in `styles/colors.css`. See https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function .
+
 ### GitHub Primer UI (primitives)
 
 Portions of `styles/article.css` are modified from GitHub Primer UI:

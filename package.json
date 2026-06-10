@@ -1,30 +1,40 @@
 {
   "name": "@umamichi-ui/common-css",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Shared CSS tokens and primitives for Umamichi UI projects.",
   "type": "module",
   "license": "(LGPL-3.0-or-later AND MIT)",
   "files": [
-    "styles",
+    "dist",
     "README.md",
     "CHANGELOG.md",
     "THIRD_PARTY_NOTICES.md"
   ],
+  "scripts": {
+    "build": "postcss \"styles/**/*.css\" --base styles --dir dist --ext .css",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
   "publishConfig": {
     "access": "public"
   },
   "exports": {
-    ".": "./styles/index.css",
-    "./core.css": "./styles/core.css",
-    "./colors.css": "./styles/colors.css",
-    "./tokens.css": "./styles/tokens.css",
-    "./reset.css": "./styles/reset.css",
-    "./layout.css": "./styles/layout.css",
-    "./forms.css": "./styles/forms.css",
-    "./primitives.css": "./styles/primitives.css",
-    "./article.css": "./styles/article.css"
+    ".": "./dist/index.css",
+    "./core.css": "./dist/core.css",
+    "./colors.css": "./dist/colors.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./reset.css": "./dist/reset.css",
+    "./layout.css": "./dist/layout.css",
+    "./forms.css": "./dist/forms.css",
+    "./primitives.css": "./dist/primitives.css",
+    "./article.css": "./dist/article.css"
   },
   "sideEffects": [
     "*.css"
-  ]
+  ],
+  "devDependencies": {
+    "@csstools/postcss-oklab-function": "^5.0.4",
+    "postcss": "^8.5.15",
+    "postcss-cli": "^11.0.1"
+  }
 }

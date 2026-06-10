@@ -1,16 +1,16 @@
 /* Standalone palette. Import before tokens.css or use styles/core.css. */
 @layer umamichi-colors {
   :root {
-    /* from https://harmonizer.evilmartians.com/, hue=213 */
-    --theme-100: #d9f9ff;
-    --theme-200: #a0f0ff;
-    --theme-300: #00e2ff;
-    --theme-400: #00ccee;
-    --theme-500: #00b0ce;
-    --theme-600: #0091ab;
-    --theme-700: #00758b;
-    --theme-800: #005364;
-    --theme-900: #00333f;
+    /* from https://harmonizer.evilmartians.com/, hue=213. Authoring in oklch; dist/ adds sRGB fallbacks. */
+    --theme-100: oklch(0.962402 0.020313 213);
+    --theme-200: oklch(0.912109 0.05 213);
+    --theme-300: oklch(0.842773 0.095313 213);
+    --theme-400: oklch(0.772949 0.14375 213);
+    --theme-500: oklch(0.687866 0.159375 213);
+    --theme-600: oklch(0.595703 0.1375 213);
+    --theme-700: oklch(0.508789 0.117188 213);
+    --theme-800: oklch(0.398437 0.092188 213);
+    --theme-900: oklch(0.290527 0.067188 213);
 
     --gray-100: #f4f4f5;
     --gray-200: #e4e4e7;

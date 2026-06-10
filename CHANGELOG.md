@@ -4,6 +4,14 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.9.0 - 2026-06-11
+
+### Changed
+
+- **破坏性**：npm 包发布 `dist/`（PostCSS 构建产物），不再直接发布 `styles/` 源码。`exports` 路径不变，但磁盘路径由 `styles/` 改为 `dist/`；若曾 deep-import `node_modules/@umamichi-ui/common-css/styles/...`，请改走包 `exports`。
+- `styles/colors.css` 中 `--theme-100`～`--theme-900` 改为 `oklch()` 源码；`npm run build` 经 `@csstools/postcss-oklab-function` 生成 sRGB / Display P3 / OKLCH 层，`dist/colors.css` 含旧浏览器可用的 `rgb()` 回退。
+- 新增 `prepare` / `prepublishOnly` 构建脚本；本地开发或 `file:` 链接后需已执行 `npm install`（触发 `prepare`）或手动 `npm run build`。
+
 ## 0.8.0
 
 - 弹窗遮罩（`.modal-backdrop`、`.example-modal-backdrop`、`.site-overlay-backdrop`、`.confirm-dialog-backdrop`）合并为同一套全视口规则：`fixed` + `100vw` / `100dvh`；默认 `z-index: 1000`。移除 `.site-overlay-backdrop` 的 `z-index: auto`。`.confirm-dialog-backdrop` 为 `1020`，便于叠在其它浮层之上。

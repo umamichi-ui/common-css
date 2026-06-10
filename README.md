@@ -22,8 +22,10 @@
 
 ## 结构
 
+npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `styles/` 为准，消费方通过包 `exports` 引用的是 `dist/` 中同名文件。
+
 - styles/core.css：最小基座（`colors.css` + `tokens.css`），单独引分层前必须先引它。
-- styles/colors.css：原始色阶（`--theme-*`、`--gray-*`）。
+- styles/colors.css：原始色阶（`--theme-*` 为 `oklch()`，`--gray-*` 为 hex）；构建后 `dist/colors.css` 含 sRGB / Display P3 / OKLCH 回退层。
 - styles/tokens.css：浅色语义 token、圆角、间距。
 - styles/tokens-dark.css：深色变量（`html.dark` 与系统 `prefers-color-scheme: dark`）；由 `core.css` 在 `tokens.css` 之后加载，勿单独引。
 - styles/reset.css：基础 reset、字体继承、链接、`prefers-reduced-motion`、主题切换钩子。
@@ -43,6 +45,13 @@
 | `@umamichi-ui/common-css/article.css` | 文章排版 | 须先引 `core.css` 或完整包 |
 
 不要只引 `primitives.css` / `forms.css` 而不引 token，否则 `--site-*` 未定义。
+
+### 构建
+
+```bash
+npm install   # 触发 prepare → build
+npm run build # 将 styles/ 编译到 dist/（PostCSS + @csstools/postcss-oklab-function）
+```
 
 按需组合示例：
 
