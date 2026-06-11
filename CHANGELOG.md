@@ -4,6 +4,17 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.10.0 - 2026-06-11
+
+### Added
+
+- 可选 `--theme-*` 预置色板：`styles/palettes/satori.css`（南京地铁 S3 标识色 `#ba84ac`，Harmonizer hue=336）、`styles/palettes/kyuri.css`（若叶睦标识色 `#779977`，Harmonizer hue=145）。在 `<html>` 设置 `data-palette="satori"` 或 `data-palette="kyuri"` 后覆盖默认 Umamichi aqua；`--gray-*` 与 `--site-*` 语义映射不变。
+- 包导出：`@umamichi-ui/common-css/palettes/satori.css`、`@umamichi-ui/common-css/palettes/kyuri.css`（构建产物在 `dist/palettes/`）。
+
+### Changed
+
+- README：新增「可选调色板」说明与预置列表；`colors.css` 描述为默认调色板。
+
 ## 0.9.0 - 2026-06-11
 
 ### Changed

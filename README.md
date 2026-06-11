@@ -9,7 +9,7 @@
 - npm: https://www.npmjs.com/package/@umamichi-ui/common-css
 - GitHub: https://github.com/umamichi-ui/common-css
 
-> 以下内容为 ChatGPT 5.4 生成，但经过初步人工检查，可以作为参考
+> 以下内容为 ChatGPT 5.4 生成，未经过初步人工检查，请谨慎对待
 
 从以下项目的现有样式中抽取出的公共 CSS 层：
 
@@ -25,7 +25,8 @@
 npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `styles/` 为准，消费方通过包 `exports` 引用的是 `dist/` 中同名文件。
 
 - styles/core.css：最小基座（`colors.css` + `tokens.css`），单独引分层前必须先引它。
-- styles/colors.css：原始色阶（`--theme-*` 为 `oklch()`，`--gray-*` 为 hex）；构建后 `dist/colors.css` 含 sRGB / Display P3 / OKLCH 回退层。
+- styles/colors.css：默认调色板（Umamichi aqua，`--theme-*` 为 `oklch()`，`--gray-*` 为 hex）；构建后 `dist/colors.css` 含 sRGB / Display P3 / OKLCH 回退层。
+- styles/palettes/：可选 `--theme-*` 预置色板；在 `<html>` 上设置 `data-palette` 后覆盖默认水色，语义 token（`--site-*`）与浅/深模式契约不变。
 - styles/tokens.css：浅色语义 token、圆角、间距。
 - styles/tokens-dark.css：深色变量（`html.dark` 与系统 `prefers-color-scheme: dark`）；由 `core.css` 在 `tokens.css` 之后加载，勿单独引。
 - styles/reset.css：基础 reset、字体继承、链接、`prefers-reduced-motion`、主题切换钩子。
@@ -43,6 +44,7 @@ npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `sty
 | `@umamichi-ui/common-css/core.css` | 调色板 + 语义 token | 无 |
 | `@umamichi-ui/common-css/reset.css` 等单层 | 仅该文件 | 须先引 `core.css`（或 `colors` + `tokens`） |
 | `@umamichi-ui/common-css/article.css` | 文章排版 | 须先引 `core.css` 或完整包 |
+| `@umamichi-ui/common-css/palettes/*.css` | 可选 `--theme-*` 色板 | 须先引 `core.css` 或完整包；并在 `<html>` 设置对应 `data-palette` |
 
 不要只引 `primitives.css` / `forms.css` 而不引 token，否则 `--site-*` 未定义。
 
@@ -72,6 +74,26 @@ import '@umamichi-ui/common-css/primitives.css';
 切换主题时可在 `<html>` 上短暂加上 `theme-transition-lock`，避免过渡闪烁（见 `reset.css`）。
 
 站点可在 `:root` 或本地样式中覆盖 `--site-header-offset`（默认 `0px`），供 `.article-content` 标题 `scroll-margin` 使用。
+
+## 可选调色板
+
+默认 `--theme-*` 为 Umamichi aqua（`colors.css`，Harmonizer hue=213）。若项目需要其它品牌色，可额外引入 `styles/palettes/` 下的预置色板，并在 `<html>` 上设置 `data-palette`；仅替换 `--theme-100`～`--theme-900`，`--gray-*` 与 `--site-*` 映射关系不变，与 `html.dark` / `html.light` 正交。
+
+```ts
+import '@umamichi-ui/common-css';
+import '@umamichi-ui/common-css/palettes/satori.css';
+```
+
+```html
+<html data-palette="satori">
+```
+
+| `data-palette` | 导出路径 | 说明 |
+|----------------|----------|------|
+| `satori` | `@umamichi-ui/common-css/palettes/satori.css` | 源于南京地铁 S3 号线标识色 `#ba84ac`（Harmonizer hue=336）；名 Satori 取自东方 Project 角色古明地さとり（Komeiji Satori） |
+| `kyuri` | `@umamichi-ui/common-css/palettes/kyuri.css` | 源于若叶睦（Wakaba Mutsumi）标识色 `#779977`（Harmonizer hue=145） |
+
+未设置 `data-palette` 时行为与引入前相同。若站点样式直接引用 `--theme-*`（而非 `--site-*`），换色板后也会一并生效。
 
 ## 表单作用域
 
@@ -153,7 +175,7 @@ import '@umamichi-ui/common-css/article.css';
 - .theme-toggle / .primary-button / .secondary-button / .ghost-button / .action-button / .status-pill
 - .form-scope 内 label / input / select / textarea 的统一边框、圆角、:focus-visible 样式
 
-这意味着后续如果你要统一调整边框层级、品牌 aqua、圆角或深色模式细节，优先改 styles/tokens.css，然后必要时改相应原语层即可。
+这意味着后续如果你要统一调整边框层级、默认品牌 aqua、圆角或深色模式细节，优先改 `styles/tokens.css`，必要时改相应原语层；若要换 `--theme-*` 色相，改 `styles/colors.css` 或新增 `styles/palettes/` 预置。
 
 ## 许可证与兼容性（LGPL + MIT）
 

@@ -1,0 +1,15 @@
+/* Optional palette. Import after core.css; set data-palette="kyuri" on <html>. */
+@layer umamichi-colors {
+  :root[data-palette='kyuri'] {
+    /* From Wakaba Mutsumi id color #779977 (Harmonizer hue=145). */
+    --theme-100: oklch(0.961914 0.028125 145);
+    --theme-200: oklch(0.909668 0.067188 145);
+    --theme-300: oklch(0.838867 0.125 145);
+    --theme-400: oklch(0.769043 0.178125 145);
+    --theme-500: oklch(0.689453 0.159375 145);
+    --theme-600: oklch(0.597656 0.1375 145);
+    --theme-700: oklch(0.510742 0.117188 145);
+    --theme-800: oklch(0.400391 0.092188 145);
+    --theme-900: oklch(0.293945 0.067188 145);
+  }
+}

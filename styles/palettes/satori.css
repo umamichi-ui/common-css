@@ -1,0 +1,15 @@
+/* Optional palette. Import after core.css; set data-palette="satori" on <html>. */
+@layer umamichi-colors {
+  :root[data-palette='satori'] {
+    /* From Nanjing Metro Line S3 id color #ba84ac (Harmonizer hue=336). Named Satori after Touhou's Komeiji Satori (古明地さとり). */
+    --theme-100: oklch(0.968018 0.029688 336);
+    --theme-200: oklch(0.925781 0.071875 336);
+    --theme-300: oklch(0.868652 0.135938 336);
+    --theme-400: oklch(0.80957 0.178125 336);
+    --theme-500: oklch(0.725586 0.159375 336);
+    --theme-600: oklch(0.628906 0.1375 336);
+    --theme-700: oklch(0.537109 0.117188 336);
+    --theme-800: oklch(0.421387 0.092188 336);
+    --theme-900: oklch(0.308594 0.067188 336);
+  }
+}
