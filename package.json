@@ -1,6 +1,6 @@
 {
   "name": "@umamichi-ui/common-css",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Shared CSS tokens and primitives for Umamichi UI projects.",
   "type": "module",
   "license": "(LGPL-3.0-or-later AND MIT)",
@@ -11,7 +11,7 @@
     "THIRD_PARTY_NOTICES.md"
   ],
   "scripts": {
-    "build": "postcss \"styles/**/*.css\" --base styles --dir dist --ext .css",
+    "build": "node scripts/generate-palettes.mjs && postcss \"styles/**/*.css\" --base styles --dir dist --ext .css",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build"
   },
@@ -28,8 +28,9 @@
     "./forms.css": "./dist/forms.css",
     "./primitives.css": "./dist/primitives.css",
     "./article.css": "./dist/article.css",
-    "./palettes/satori.css": "./dist/palettes/satori.css",
-    "./palettes/kyuri.css": "./dist/palettes/kyuri.css"
+    "./palettes": "./dist/palettes/index.css",
+    "./palettes.json": "./dist/palettes.json",
+    "./palettes/*": "./dist/palettes/*"
   },
   "sideEffects": [
     "*.css"

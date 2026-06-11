@@ -1,4 +1,5 @@
 dist/
+styles/palettes/index.css
 node_modules/
 *.tgz
 npm-debug.log*

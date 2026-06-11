@@ -44,7 +44,9 @@ npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `sty
 | `@umamichi-ui/common-css/core.css` | 调色板 + 语义 token | 无 |
 | `@umamichi-ui/common-css/reset.css` 等单层 | 仅该文件 | 须先引 `core.css`（或 `colors` + `tokens`） |
 | `@umamichi-ui/common-css/article.css` | 文章排版 | 须先引 `core.css` 或完整包 |
-| `@umamichi-ui/common-css/palettes/*.css` | 可选 `--theme-*` 色板 | 须先引 `core.css` 或完整包；并在 `<html>` 设置对应 `data-palette` |
+| `@umamichi-ui/common-css/palettes` | 全部可选色板（`index.css`） | 须先引 `core.css` 或完整包；并在 `<html>` 设置 `data-palette` |
+| `@umamichi-ui/common-css/palettes.json` | 色板清单（`id` / `label` / `intro`） | 供 UI 与校验；构建生成 |
+| `@umamichi-ui/common-css/palettes/*.css` | 单个色板 | 同上 |
 
 不要只引 `primitives.css` / `forms.css` 而不引 token，否则 `--site-*` 未定义。
 
@@ -77,21 +79,24 @@ import '@umamichi-ui/common-css/primitives.css';
 
 ## 可选调色板
 
-默认 `--theme-*` 为 Umamichi aqua（`colors.css`，Harmonizer hue=213）。若项目需要其它品牌色，可额外引入 `styles/palettes/` 下的预置色板，并在 `<html>` 上设置 `data-palette`；仅替换 `--theme-100`～`--theme-900`，`--gray-*` 与 `--site-*` 映射关系不变，与 `html.dark` / `html.light` 正交。
+默认 `--theme-*` 为 Umamichi aqua（`colors.css`，Harmonizer hue=213）。若项目需要其它品牌色，可引入构建生成的 `palettes/index.css`（聚合 `styles/palettes/*.css`），并在 `<html>` 上设置 `data-palette`；仅替换 `--theme-100`～`--theme-900`，`--gray-*` 与 `--site-*` 映射关系不变，与 `html.dark` / `html.light` 正交。
 
 ```ts
 import '@umamichi-ui/common-css';
-import '@umamichi-ui/common-css/palettes/satori.css';
+import '@umamichi-ui/common-css/palettes';
 ```
+
+```ts
+import paletteManifest from '@umamichi-ui/common-css/palettes.json';
+```
+
+`palettes.json` 与 `palettes/index.css` 由 `npm run build` 时 `scripts/generate-palettes.mjs` 根据 `styles/palettes/*.css`（除 `index.css`）生成。清单含 `default` 与 `palettes[]`，每项为 `id`、`label`、`intro`（无 `hue`）。各 palette 源文件须含 `/* @palette` 元数据块（`label:`、`intro:`）；默认 aqua 文案在 `scripts/palette-default.json`。
 
 ```html
 <html data-palette="satori">
 ```
 
-| `data-palette` | 导出路径 | 说明 |
-|----------------|----------|------|
-| `satori` | `@umamichi-ui/common-css/palettes/satori.css` | 源于南京地铁 S3 号线标识色 `#ba84ac`（Harmonizer hue=336）；名 Satori 取自东方 Project 角色古明地さとり（Komeiji Satori） |
-| `kyuri` | `@umamichi-ui/common-css/palettes/kyuri.css` | 源于若叶睦（Wakaba Mutsumi）标识色 `#779977`（Harmonizer hue=145） |
+也可按需单独引入 `@umamichi-ui/common-css/palettes/satori.css` 等（`exports` 通配 `./palettes/*`）。
 
 未设置 `data-palette` 时行为与引入前相同。若站点样式直接引用 `--theme-*`（而非 `--site-*`），换色板后也会一并生效。
 

@@ -4,6 +4,18 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.10.1 - 2026-06-11
+
+### Added
+
+- 构建脚本 `scripts/generate-palettes.mjs`：根据 `styles/palettes/*.css` 生成 `styles/palettes/index.css`（聚合 `@import`）与 `dist/palettes.json`（`default` + `palettes[]`，每项 `id` / `label` / `intro`，无 `hue`）。
+- 包导出：`@umamichi-ui/common-css/palettes`（`index.css`）、`@umamichi-ui/common-css/palettes.json`；`./palettes/*` 通配替代逐文件列出。
+- 各 palette 源文件 `/* @palette` 元数据块（`label:`、`intro:`）；默认 aqua 文案在 `scripts/palette-default.json`。
+
+### Changed
+
+- README：可选调色板改为推荐 `import '@umamichi-ui/common-css/palettes'` 与 `palettes.json`；说明构建生成约定。
+
 ## 0.10.0 - 2026-06-11
 
 ### Added

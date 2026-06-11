@@ -1,7 +1,10 @@
 /* Optional palette. Import after core.css; set data-palette="kyuri" on <html>. */
+/* @palette
+   label: Kyuri
+   intro: 源于若叶睦（Wakaba Mutsumi）标识色 #779977
+ */
 @layer umamichi-colors {
   :root[data-palette='kyuri'] {
-    /* From Wakaba Mutsumi id color #779977 (Harmonizer hue=145). */
     --theme-100: oklch(0.961914 0.028125 145);
     --theme-200: oklch(0.909668 0.067188 145);
     --theme-300: oklch(0.838867 0.125 145);
