@@ -7,8 +7,20 @@ const root = path.resolve(__dirname, '..');
 const palettesDir = path.join(root, 'styles', 'palettes');
 const distDir = path.join(root, 'dist');
 const defaultMetaPath = path.join(__dirname, 'palette-default.json');
+const colorsCssPath = path.join(root, 'styles', 'colors.css');
 
 const INDEX_BASENAME = 'index.css';
+
+/** @param {string} source @param {string} context */
+function parseTheme500(source, context) {
+  const match = source.match(/--theme-500:\s*([^;]+);/);
+
+  if (!match) {
+    throw new Error(`${context}: missing --theme-500`);
+  }
+
+  return match[1].trim();
+}
 
 /** @param {string} source */
 function parsePaletteMeta(source, id) {
@@ -29,11 +41,14 @@ function parsePaletteMeta(source, id) {
     id,
     label: labelMatch[1].trim(),
     intro: introMatch[1].trim(),
+    swatch: parseTheme500(source, `styles/palettes/${id}.css`),
   };
 }
 
 async function main() {
   const defaultMeta = JSON.parse(await readFile(defaultMetaPath, 'utf8'));
+  const colorsCss = await readFile(colorsCssPath, 'utf8');
+  const defaultSwatch = parseTheme500(colorsCss, 'styles/colors.css');
   const entries = await readdir(palettesDir, { withFileTypes: true });
   const paletteFiles = entries
     .filter((entry) => entry.isFile() && entry.name.endsWith('.css') && entry.name !== INDEX_BASENAME)
@@ -59,6 +74,7 @@ async function main() {
       id: null,
       label: defaultMeta.label,
       intro: defaultMeta.intro,
+      swatch: defaultSwatch,
     },
     palettes,
   };

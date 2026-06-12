@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.10.2 - 2026-06-11
+
+### Added
+
+- `palettes.json` 的 `default` 与 `palettes[]` 各项新增 `swatch`：构建时从 `styles/colors.css`（默认）或各 palette 源文件的 `--theme-500` 解析，供菜单预览等 UI 使用。
+
 ## 0.10.1 - 2026-06-11
 
 ### Added

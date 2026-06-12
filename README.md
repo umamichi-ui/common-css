@@ -45,7 +45,7 @@ npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `sty
 | `@umamichi-ui/common-css/reset.css` 等单层 | 仅该文件 | 须先引 `core.css`（或 `colors` + `tokens`） |
 | `@umamichi-ui/common-css/article.css` | 文章排版 | 须先引 `core.css` 或完整包 |
 | `@umamichi-ui/common-css/palettes` | 全部可选色板（`index.css`） | 须先引 `core.css` 或完整包；并在 `<html>` 设置 `data-palette` |
-| `@umamichi-ui/common-css/palettes.json` | 色板清单（`id` / `label` / `intro`） | 供 UI 与校验；构建生成 |
+| `@umamichi-ui/common-css/palettes.json` | 色板清单（`id` / `label` / `intro` / `swatch`） | 供 UI 与校验；构建生成 |
 | `@umamichi-ui/common-css/palettes/*.css` | 单个色板 | 同上 |
 
 不要只引 `primitives.css` / `forms.css` 而不引 token，否则 `--site-*` 未定义。
@@ -90,7 +90,7 @@ import '@umamichi-ui/common-css/palettes';
 import paletteManifest from '@umamichi-ui/common-css/palettes.json';
 ```
 
-`palettes.json` 与 `palettes/index.css` 由 `npm run build` 时 `scripts/generate-palettes.mjs` 根据 `styles/palettes/*.css`（除 `index.css`）生成。清单含 `default` 与 `palettes[]`，每项为 `id`、`label`、`intro`（无 `hue`）。各 palette 源文件须含 `/* @palette` 元数据块（`label:`、`intro:`）；默认 aqua 文案在 `scripts/palette-default.json`。
+`palettes.json` 与 `palettes/index.css` 由 `npm run build` 时 `scripts/generate-palettes.mjs` 根据 `styles/palettes/*.css`（除 `index.css`）生成。清单含 `default` 与 `palettes[]`，每项为 `id`、`label`、`intro`、`swatch`（`--theme-500` 源码色值，无 `hue` 字段）。各 palette 源文件须含 `/* @palette` 元数据块（`label:`、`intro:`）；默认 aqua 文案在 `scripts/palette-default.json`，默认 `swatch` 取自 `styles/colors.css`。
 
 ```html
 <html data-palette="satori">
