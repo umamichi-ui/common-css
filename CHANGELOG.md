@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.10.3 - 2026-06-12
+
+### Added
+
+- 可选 `--theme-*` 预置色板：`styles/palettes/yukari.css`（上海地铁 10 号线标识色 `#C6AFD4`，Harmonizer hue=312）。在 `<html>` 设置 `data-palette="yukari"` 后覆盖默认 Umamichi aqua；名 Yukari 取自結月ゆかり（Yuzuki Yukari）或东方 Project 角色八雲紫（Yakumo Yukari）。
+
 ## 0.10.2 - 2026-06-11
 
 ### Added
