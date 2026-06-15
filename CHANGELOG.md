@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.12.0 - 2026-06-15
+
+### Changed
+
+- `--font-ui`：移除显式 CJK 字体族（Microsoft YaHei UI、Noto Sans SC、PingFang SC 等）；中文等字符改由 `sans-serif` 与系统回退处理。消费方若需固定 CJK 栈，请在本地覆盖 `--font-ui`。
+
 ## 0.11.0 - 2026-06-15
 
 ### Changed
