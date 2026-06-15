@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.11.0 - 2026-06-15
+
+### Changed
+
+- `--font-ui`：在保留 CJK 回退（Microsoft YaHei UI、Noto Sans SC、PingFang SC 等）的前提下，扩展拉丁与跨平台系统 UI 栈——`Segoe UI Variable` / `Segoe UI Variable Text` / `Segoe UI`、`-apple-system` / `BlinkMacSystemFont`、`Helvetica Neue` / `Helvetica` / `Arial`。
+
 ## 0.10.3 - 2026-06-12
 
 ### Added
