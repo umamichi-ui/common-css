@@ -4,6 +4,16 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.13.0 - 2026-06-26
+
+### Changed
+
+- `article.css`：与 umamichi.moe 正文排版对齐（`h1` `2.5em`；`h1`/`h2` 字重 300，`h3`–`h6` 400，`b`/`strong` 600）；新增 `--article-weight-*`、`--article-pre-radius`、`--article-heading-scroll-margin` token；`line-height` 默认 `1.65`；补充 `picture`、`img height: auto`、更细的 `blockquote` 内边距。
+
+### Added
+
+- `article-interactive.css`：`.article-heading-anchor-copy` 标题锚点复制按钮样式（可选引入，依赖 `article.css`）。
+
 ## 0.12.0 - 2026-06-15
 
 ### Changed

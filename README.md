@@ -34,6 +34,7 @@ npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `sty
 - styles/forms.css：在 `.form-scope` 内的表单控件；类名 `.text-input` / `.select-input` 可单独用于非原生控件。
 - styles/primitives.css：theme toggle、button 系列、status pill、callout、预览容器。
 - styles/article.css：文章排版层，按需单独引入；依赖 `core` 中的 token。
+- styles/article-interactive.css：标题锚点复制按钮等交互样式；依赖 `article.css`。
 - styles/index.css：默认入口（`core` → reset → layout → forms → primitives），不含 article。
 
 ## 引入顺序与依赖
@@ -44,6 +45,7 @@ npm 发布 `dist/`（`npm run build` 产出）；下列路径以 **源码** `sty
 | `@umamichi-ui/common-css/core.css` | 调色板 + 语义 token | 无 |
 | `@umamichi-ui/common-css/reset.css` 等单层 | 仅该文件 | 须先引 `core.css`（或 `colors` + `tokens`） |
 | `@umamichi-ui/common-css/article.css` | 文章排版 | 须先引 `core.css` 或完整包 |
+| `@umamichi-ui/common-css/article-interactive.css` | 标题锚点复制按钮 | 须先引 `article.css` |
 | `@umamichi-ui/common-css/palettes` | 全部可选色板（`index.css`） | 须先引 `core.css` 或完整包；并在 `<html>` 设置 `data-palette` |
 | `@umamichi-ui/common-css/palettes.json` | 色板清单（`id` / `label` / `intro` / `swatch`） | 供 UI 与校验；构建生成 |
 | `@umamichi-ui/common-css/palettes/*.css` | 单个色板 | 同上 |
