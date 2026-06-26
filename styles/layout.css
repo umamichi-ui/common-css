@@ -276,11 +276,21 @@
     }
   }
 
+  /* Article h2 typography without the bottom rule (umamichi.moe .article-content h2). */
+  .site-content-heading,
+  .confirm-dialog-title {
+    font-size: 1.95rem;
+    font-weight: var(--site-weight-content-h1-h2);
+    line-height: 1.32;
+    color: var(--site-fg);
+  }
+
+  .site-content-heading {
+    margin: 0 0 1rem;
+  }
+
   .confirm-dialog-title {
     margin: 0 0 10px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.35;
   }
 
   .confirm-dialog-body {

@@ -4,6 +4,16 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.17.0 - 2026-06-27
+
+### Added
+
+- `layout.css`：`.site-content-heading` — 与文章 `h2` 相同的字号/字重/行高（`1.95rem`、`--site-weight-content-h1-h2`、`1.32`），无下划线。
+
+### Changed
+
+- `layout.css`：`.confirm-dialog-title` 改为与 `.site-content-heading` 共用排版（原 `1.05rem` / `600`）。
+
 ## 0.16.0 - 2026-06-27
 
 ### Added
