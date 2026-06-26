@@ -62,7 +62,7 @@
     margin-bottom: 1rem;
     padding-bottom: 0.35em;
     border-bottom: 1px solid var(--article-border);
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: var(--article-weight-h1-h2);
     line-height: 1.24;
   }
@@ -72,7 +72,7 @@
     margin-bottom: 1rem;
     padding-bottom: 0.3em;
     border-bottom: 1px solid var(--article-border);
-    font-size: 1.95em;
+    font-size: 1.95rem;
     font-weight: var(--article-weight-h1-h2);
     line-height: 1.32;
   }
@@ -80,7 +80,7 @@
   .article-content h3 {
     margin-top: 1.26em;
     margin-bottom: 1rem;
-    font-size: 1.65em;
+    font-size: 1.65rem;
     font-weight: var(--article-weight-h3-h6);
     line-height: 1.42;
   }
@@ -88,7 +88,7 @@
   .article-content h4 {
     margin-top: 1.2em;
     margin-bottom: 1rem;
-    font-size: 1.38em;
+    font-size: 1.38rem;
     font-weight: var(--article-weight-h3-h6);
     line-height: 1.52;
   }
@@ -97,7 +97,7 @@
   .article-content h6 {
     margin-top: 1.12em;
     margin-bottom: 1rem;
-    font-size: 1.18em;
+    font-size: 1.18rem;
     font-weight: var(--article-weight-h3-h6);
     line-height: 1.625;
   }
@@ -243,7 +243,7 @@
     margin: 0;
     border-radius: 6px;
     background-color: var(--article-inline-code-bg);
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 
   .article-content pre {
@@ -253,7 +253,7 @@
     padding: 16px;
     border-radius: var(--article-pre-radius);
     background-color: var(--article-code-block-bg);
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 1.45;
   }
 
