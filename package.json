@@ -1,6 +1,6 @@
 {
   "name": "@umamichi-ui/common-css",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Shared CSS tokens and primitives for Umamichi UI projects.",
   "type": "module",
   "license": "(LGPL-3.0-or-later AND MIT)",

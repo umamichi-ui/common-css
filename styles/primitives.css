@@ -17,7 +17,8 @@
     border-radius: var(--radius-sm);
     background: var(--site-button-bg);
     color: var(--site-button-fg);
-    font-size: 0.92rem;
+    font-size: 0.875rem;
+    font-weight: var(--site-weight-regular);
     transition: background-color var(--transition-fast), color var(--transition-fast), transform 60ms ease;
   }
 

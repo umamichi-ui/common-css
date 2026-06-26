@@ -4,6 +4,17 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.16.0 - 2026-06-27
+
+### Added
+
+- `tokens.css`：壳层字重尺度 `--site-weight-light` / `regular` / `medium` / `semibold` 及页面/正文标题别名（`--site-weight-page-title`、`--site-weight-content-h1-h2`、`--site-weight-content-h3-h6`）。
+
+### Changed
+
+- `article.css`：`--article-weight-*` 默认改为引用 `--site-weight-*`。
+- `primitives.css`：按钮字号 `0.92rem` → `0.875rem`，字重 `var(--site-weight-regular)`。
+
 ## 0.15.0 - 2026-06-26
 
 ### Changed
