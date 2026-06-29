@@ -19,7 +19,11 @@
     color: var(--site-button-fg);
     font-size: 0.875rem;
     font-weight: var(--site-weight-regular);
-    transition: background-color var(--transition-fast), color var(--transition-fast), transform 60ms ease;
+    transform-origin: center;
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast),
+      transform var(--site-button-press-duration) var(--site-button-press-easing);
   }
 
   .theme-toggle:hover,
@@ -31,6 +35,17 @@
     color: var(--site-button-fg);
   }
 
+  .theme-toggle:active:not(:disabled),
+  .action-button:active:not(:disabled),
+  .primary-button:active:not(:disabled),
+  .secondary-button:active:not(:disabled),
+  .outline-button:active:not(:disabled),
+  .ghost-button:active:not(:disabled),
+  .icon-button:active:not(:disabled),
+  .danger-button:active:not(:disabled) {
+    transform: scale(var(--site-button-press-scale));
+  }
+
   .theme-toggle:active,
   .action-button:active,
   .primary-button:active,
@@ -39,18 +54,17 @@
     border: none;
     background: var(--site-button-active-bg);
     color: var(--site-button-fg);
-    transform: translateY(1px);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .theme-toggle:active,
-    .action-button:active,
-    .primary-button:active,
-    .secondary-button:active,
-    .icon-button:active,
-    .outline-button:active,
-    .ghost-button:active,
-    .danger-button:active {
+    .theme-toggle:active:not(:disabled),
+    .action-button:active:not(:disabled),
+    .primary-button:active:not(:disabled),
+    .secondary-button:active:not(:disabled),
+    .outline-button:active:not(:disabled),
+    .ghost-button:active:not(:disabled),
+    .icon-button:active:not(:disabled),
+    .danger-button:active:not(:disabled) {
       transform: none;
     }
   }
@@ -109,7 +123,6 @@
     border-color: var(--site-border-strong);
     background: var(--site-active-bg);
     color: var(--site-fg);
-    transform: translateY(1px);
   }
 
   .ghost-button {
@@ -128,7 +141,6 @@
     border-color: transparent;
     background: var(--site-active-bg);
     color: var(--site-fg);
-    transform: translateY(1px);
   }
 
   .icon-button {
@@ -151,7 +163,6 @@
     border: none;
     background: color-mix(in srgb, var(--site-danger-soft) 65%, var(--site-button-active-bg));
     color: var(--site-danger);
-    transform: translateY(1px);
   }
 
   .ghost-button:disabled,

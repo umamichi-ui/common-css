@@ -4,6 +4,16 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
 
+## 0.18.0 - 2026-06-30
+
+### Added
+
+- `tokens.css`：按钮按下动效 token `--site-button-press-scale`（`0.98`）、`--site-button-press-duration`（`100ms`）、`--site-button-press-easing`。
+
+### Changed
+
+- `primitives.css`：所有按钮变体 `:active` 由 `translateY(1px)` 改为 `scale(var(--site-button-press-scale))`；基座增加 `transform-origin: center`；`prefers-reduced-motion: reduce` 时仍关闭 transform。
+
 ## 0.17.0 - 2026-06-27
 
 ### Added
