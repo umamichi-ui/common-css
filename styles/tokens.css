@@ -54,6 +54,8 @@
     --site-frosted-blur: 12px;
     --site-frosted-overlay: color-mix(in srgb, var(--site-surface) 58%, transparent);
     --site-focus-ring: color-mix(in srgb, var(--site-accent) 22%, transparent);
+    --site-selection-bg: var(--theme-100);
+    --site-selection-fg: inherit;
 
     --radius-sm: 10px;
     --radius-md: 14px;

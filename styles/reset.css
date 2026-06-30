@@ -28,6 +28,11 @@
     text-rendering: optimizeLegibility;
   }
 
+  ::selection {
+    background: var(--site-selection-bg);
+    color: var(--site-selection-fg);
+  }
+
   * {
     scrollbar-color: var(--site-accent) var(--site-surface-muted);
     scrollbar-width: thin;

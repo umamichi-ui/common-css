@@ -2,7 +2,14 @@
 
 本文件记录 [@umamichi-ui/common-css](https://www.npmjs.com/package/@umamichi-ui/common-css) 的版本变更。
 
-> 以下部分内容为 LLM 总结，但是经过人工检查，可以信任
+> 以下部分内容为 LLM 总结，但是经过人工检查，可作为参考
+
+## 0.19.0 - 2026-06-30
+
+### Added
+
+- `tokens.css` / `tokens-dark.css`：文本选区 token `--site-selection-bg`（浅色 `theme-100`、深色 `theme-900`）、`--site-selection-fg`（默认 `inherit`）。
+- `reset.css`：全局 `::selection` 使用上述 token。
 
 ## 0.18.0 - 2026-06-30
 
