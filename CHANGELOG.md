@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可作为参考
 
+## 0.19.1 - 2026-07-31
+
+### Changed
+
+- `article-interactive.css`：标题锚点复制按钮与标题的大小/位置更协调——固定 rem 侧栏 gutter、图标尺寸 `clamp(0.875rem, 0.5em, 1.125rem)`、用 `0.5lh` 对齐首行（避免 h1/h2 底边 padding 把图标拉低）、SVG 填满按钮、`:active` 使用 `--site-button-press-*`（含 `prefers-reduced-motion`）。
+
 ## 0.19.0 - 2026-06-30
 
 ### Added

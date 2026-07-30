@@ -10,6 +10,10 @@
     position: relative;
   }
 
+  /*
+   * Quiet shared gutter (rem, not em): icons stay in one column across heading levels.
+   * Hit target is slightly wider than the visible control.
+   */
   .article-content h1::before,
   .article-content h2::before,
   .article-content h3::before,
@@ -20,33 +24,40 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -0.95em;
-    width: 0.95em;
+    left: -1.4rem;
+    width: 1.4rem;
   }
 
   .article-content .article-heading-anchor-copy {
     position: absolute;
-    left: -0.85em;
+    left: -1.3rem;
+    /* Fallback: box center. Prefer first-line center so h1/h2 padding-bottom does not pull the icon down. */
     top: 50%;
+    top: 0.5lh;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 0.8em;
-    height: 0.8em;
+    width: clamp(0.875rem, 0.5em, 1.125rem);
+    height: clamp(0.875rem, 0.5em, 1.125rem);
     padding: 0;
     border: 0;
+    border-radius: 4px;
     background: transparent;
     color: var(--site-subtle-fg);
     cursor: pointer;
     opacity: 0;
     transform: translateY(-50%);
-    transition: opacity 120ms ease;
+    transform-origin: center;
+    transition:
+      opacity 120ms ease,
+      color 120ms ease,
+      transform var(--site-button-press-duration, 100ms) var(--site-button-press-easing, ease);
     pointer-events: none;
   }
 
   .article-content .article-heading-anchor-copy svg {
-    width: 1em;
-    height: 1em;
+    width: 100%;
+    height: 100%;
     fill: currentColor;
   }
 
@@ -69,5 +80,15 @@
   .article-content .article-heading-anchor-copy:hover,
   .article-content .article-heading-anchor-copy:focus-visible {
     color: var(--article-link-hover);
+  }
+
+  .article-content .article-heading-anchor-copy:active {
+    transform: translateY(-50%) scale(var(--site-button-press-scale, 0.98));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .article-content .article-heading-anchor-copy:active {
+      transform: translateY(-50%);
+    }
   }
 }
