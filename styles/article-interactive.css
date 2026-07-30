@@ -24,21 +24,21 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -1.4rem;
-    width: 1.4rem;
+    left: -1.85rem;
+    width: 1.85rem;
   }
 
   .article-content .article-heading-anchor-copy {
     position: absolute;
-    left: -1.3rem;
+    left: -1.7rem;
     /* Fallback: box center. Prefer first-line center so h1/h2 padding-bottom does not pull the icon down. */
     top: 50%;
     top: 0.5lh;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: clamp(0.875rem, 0.5em, 1.125rem);
-    height: clamp(0.875rem, 0.5em, 1.125rem);
+    width: clamp(1.125rem, 0.65em, 1.5rem);
+    height: clamp(1.125rem, 0.65em, 1.5rem);
     padding: 0;
     border: 0;
     border-radius: 4px;
