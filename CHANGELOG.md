@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可作为参考
 
+## 0.19.3 - 2026-08-03
+
+### Changed
+
+- `primitives.css`：`.dropdown-menu-panel` / `.download-format-menu-panel` 外壳不再兼作列表；新增内层 `.dropdown-menu-panel__list` / `.download-format-menu-panel__list` 承载菜单项滚动。保留对旧「外壳即 `<ul>`」直系 `li` 选择器的兼容。
+
 ## 0.19.2 - 2026-07-31
 
 ### Changed

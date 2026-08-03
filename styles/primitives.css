@@ -357,7 +357,6 @@
     max-width: calc(100vw - 16px);
     margin: 0;
     padding: 4px 0;
-    list-style: none;
     border: 1px solid var(--site-border);
     background: var(--site-surface);
     color: var(--site-fg);
@@ -370,6 +369,19 @@
       opacity var(--transition-overlay),
       transform var(--transition-overlay),
       visibility 0s linear var(--transition-overlay);
+  }
+
+  /*
+   * Scroll lives on the inner list, not the shell. Chromatic fringe (absolute +
+   * transform pseudos) on a scroll container sticks to the content offset on some
+   * Android Chromium builds; keep overflow off `.dropdown-menu-panel`.
+   */
+  .dropdown-menu-panel__list,
+  .download-format-menu-panel__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
   }
 
   .dropdown-menu-panel.is-open,
@@ -391,6 +403,9 @@
     }
   }
 
+  .dropdown-menu-panel__list > li,
+  .download-format-menu-panel__list > li,
+  /* Legacy: shell still a `<ul>` before consumers pick up nested list markup. */
   .dropdown-menu-panel > li,
   .download-format-menu-panel > li {
     margin: 0;
