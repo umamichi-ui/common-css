@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可作为参考
 
+## 0.20.0 - 2026-09-11
+
+### Changed
+
+- 默认 aqua（`colors.css`）与可选色板 kyuri / satori / yukari：OKLCH chroma 统一 ×0.75（L/H 不变），降低主题色饱和度，仍保留品牌色相识别。
+
 ## 0.19.3 - 2026-08-03
 
 ### Changed

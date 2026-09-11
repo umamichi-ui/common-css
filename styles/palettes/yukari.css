@@ -5,14 +5,15 @@
  */
 @layer umamichi-colors {
   :root[data-palette='yukari'] {
-    --theme-100: oklch(0.966797 0.023438 312);
-    --theme-200: oklch(0.922607 0.05625 312);
-    --theme-300: oklch(0.863281 0.103125 312);
-    --theme-400: oklch(0.803711 0.151563 312);
-    --theme-500: oklch(0.729492 0.214063 312);
-    --theme-600: oklch(0.642578 0.290625 312);
-    --theme-700: oklch(0.54541 0.289063 312);
-    --theme-800: oklch(0.422852 0.223438 312);
-    --theme-900: oklch(0.302734 0.159375 312);
+    /* chroma ×0.75 vs prior scale (aligned with colors.css 0.20.0) */
+    --theme-100: oklch(0.966797 0.017578 312);
+    --theme-200: oklch(0.922607 0.042188 312);
+    --theme-300: oklch(0.863281 0.077344 312);
+    --theme-400: oklch(0.803711 0.113672 312);
+    --theme-500: oklch(0.729492 0.160547 312);
+    --theme-600: oklch(0.642578 0.217969 312);
+    --theme-700: oklch(0.54541 0.216797 312);
+    --theme-800: oklch(0.422852 0.167578 312);
+    --theme-900: oklch(0.302734 0.119531 312);
   }
 }
