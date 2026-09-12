@@ -4,6 +4,17 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可作为参考
 
+## 0.21.0 - 2026-09-12
+
+### Changed
+
+- `article.css`：标题字号统一按 GitHub 规范放大至 5/4（h1: 2.5em ~ h6: 1.0625em），行高统一为 1.25；标题外边距改用基于正文标尺的 rem 度量（上疏下密：margin-top 1.25rem~2rem，margin-bottom 0.5rem~1rem），保持段落与连续标题的自然节奏。
+- `article.css`：行内代码（`:not(pre) > code`）改用相对字号 85% 并支持标题等比继承；嵌套列表与松散列表保持规范段落间距。
+
+### Added
+
+- `article.css`：文末脚注（`.footnotes`）增加次级文字弱化与边框样式、`[data-footnote-ref]` 增加引用角标括号，并增加 `.sr-only` 隐藏样式。
+
 ## 0.20.0 - 2026-09-11
 
 ### Changed
