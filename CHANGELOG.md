@@ -4,6 +4,12 @@
 
 > 以下部分内容为 LLM 总结，但是经过人工检查，可作为参考
 
+## 0.22.0 - 2026-09-28
+
+### Changed
+
+- `tokens.css` / `tokens-dark.css`：壳层语义色按颜色面积比例考量重绑；`--site-surface-muted` / `--site-border-soft` 与 hover·active 改用 `theme-*` 浅洗；`--site-accent-strong` 与 accent 按钮档位上移到中档填充，避免只靠细线/链接点色。
+
 ## 0.21.0 - 2026-09-12
 
 ### Changed

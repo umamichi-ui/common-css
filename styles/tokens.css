@@ -8,9 +8,10 @@
       "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-code: "Cascadia Code", "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
 
+    /* Content stays paper-white; muted chrome uses theme-100 wash (Markets-tier). Sidebar stays on --site-bg (often borderless). */
     --site-bg: #ffffff;
     --site-surface: var(--site-bg);
-    --site-surface-muted: var(--gray-100);
+    --site-surface-muted: var(--theme-100);
     --site-fg: var(--gray-800);
     --site-muted-fg: var(--gray-600);
     --site-subtle-fg: var(--gray-500);
@@ -19,10 +20,10 @@
 
     --site-border: rgba(0, 0, 0, 0.08);
     --site-border-strong: rgba(0, 0, 0, 0.16);
-    --site-border-soft: var(--gray-100);
+    --site-border-soft: var(--theme-100);
     --site-content-border: var(--gray-100);
-    --site-hover-bg: rgba(0, 0, 0, 0.04);
-    --site-active-bg: rgba(0, 0, 0, 0.08);
+    --site-hover-bg: color-mix(in srgb, var(--theme-300) 18%, transparent);
+    --site-active-bg: color-mix(in srgb, var(--theme-400) 28%, transparent);
     --site-sidebar-bg: var(--site-bg);
     --site-sidebar-border: var(--gray-300);
     --site-header-bg: var(--theme-200);
@@ -33,9 +34,9 @@
 
     --site-accent: var(--theme-500);
     --site-accent-hover: var(--theme-400);
-    --site-accent-strong: var(--theme-400);
+    --site-accent-strong: var(--theme-600);
     --site-accent-soft: var(--theme-100);
-    --site-accent-border: var(--theme-200);
+    --site-accent-border: var(--theme-300);
     --site-link: var(--site-accent);
     --site-link-hover: var(--site-accent-hover);
 
@@ -96,9 +97,10 @@
     --site-button-active-bg: var(--gray-300);
     --site-button-fg: var(--site-fg);
 
-    --site-button-accent-bg: var(--theme-200);
-    --site-button-accent-hover-bg: var(--theme-300);
-    --site-button-accent-active-bg: var(--theme-400);
+    /* Mid-fill accent control: readable on white, larger area presence than theme-200 wash. */
+    --site-button-accent-bg: var(--theme-300);
+    --site-button-accent-hover-bg: var(--theme-400);
+    --site-button-accent-active-bg: var(--theme-500);
     --site-button-accent-fg: var(--theme-900);
   }
 
